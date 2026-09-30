@@ -9,6 +9,9 @@
 defined( 'ABSPATH' ) || exit;
 
 function nada_acf_text( $name, $label, $type = 'text' ) {
+	if ( preg_match( '/_link_\d+(?:_(?:en|ar))?$/', $name ) || 'home_section_5_rtiles_grid_url' === $name ) {
+		return array( 'key' => 'field_nada_' . $name, 'name' => $name, 'label' => str_replace( 'URL', 'link', $label ), 'type' => 'link', 'return_format' => 'array', 'instructions' => 'Choose a destination. An optional link title overrides the existing label.' );
+	}
 	return array( 'key' => 'field_nada_' . $name, 'name' => $name, 'label' => $label, 'type' => $type, 'new_lines' => '', 'instructions' => __( 'Plain text only. Layout and HTML are supplied by the theme.', 'nada' ) );
 }
 
@@ -45,6 +48,12 @@ add_action( 'acf/init', function () {
 			}
 			$fields[] = array( 'key' => 'field_nada_' . $name, 'name' => $name, 'label' => $definition['label'], 'type' => 'repeater', 'layout' => 'block', 'button_label' => 'Add item', 'sub_fields' => $sub_fields );
 		}
+		foreach ( nada_data( 'section-images' ) as $name => $image ) {
+			if ( $page === $image['page'] ) {
+				$fields[] = array( 'key' => 'field_nada_' . $name, 'name' => $name, 'label' => $image['label'], 'type' => 'image', 'return_format' => 'id', 'preview_size' => 'thumbnail' );
+			}
+		}
+
 		if ( 'home' === $page ) {
 			$fields[] = array( 'key' => 'field_nada_home_reasons_image', 'name' => 'home_reasons_image', 'label' => 'Why Greek product image', 'type' => 'image', 'return_format' => 'id', 'preview_size' => 'medium' );
 		}

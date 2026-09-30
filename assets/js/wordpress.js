@@ -1,6 +1,10 @@
 /** Accessible menu interactions. Content and translations are rendered by WordPress. */
 (function () {
     'use strict';
+    const nav = document.getElementById('nav');
+    const updateNav = () => nav?.classList.toggle('is-solid', window.scrollY > 24);
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
     const toggle = document.getElementById('burger');
     const drawer = document.getElementById('drawer');
     if (!toggle || !drawer) return;

@@ -13,11 +13,12 @@ add_action( 'acf/init', function () {
 	$fields = array(
 		array( 'key' => 'field_nada_options_global', 'label' => 'Global', 'type' => 'tab' ),
 		array( 'key' => 'field_nada_site_logo', 'name' => 'site_logo', 'label' => 'Site logo', 'type' => 'image', 'return_format' => 'id', 'preview_size' => 'medium', 'instructions' => 'Uses the same site logo as Customize → Site Identity. Changes in either place stay in sync.' ),
+		array( 'key' => 'field_nada_footer_logo', 'name' => 'footer_logo', 'label' => 'Footer logo', 'type' => 'image', 'return_format' => 'id', 'preview_size' => 'thumbnail', 'instructions' => 'Optional footer version of the logo. Leave empty to use the synchronized site logo.' ),
 		nada_acf_text( 'footer_text_en', 'Footer text — English' ),
 		nada_acf_text( 'footer_text_ar', 'Footer text — Arabic' ),
 		nada_acf_text( 'cta_label_en', 'CTA label — English' ),
 		nada_acf_text( 'cta_label_ar', 'CTA label — Arabic' ),
-		array( 'key' => 'field_nada_cta_url', 'name' => 'cta_url', 'label' => 'CTA URL (leave empty for Share Recipe)', 'type' => 'url' ),
+		array( 'key' => 'field_nada_cta_url', 'name' => 'cta_url', 'label' => 'CTA link', 'type' => 'link', 'return_format' => 'array' ),
 
 	);
 	// Archive copy belongs in global options because archives have no page ID.
@@ -43,9 +44,17 @@ add_action( 'acf/init', function () {
 			$fields[] = array( 'key' => 'field_nada_' . $name . '_' . $language, 'name' => $name . '_' . $language, 'label' => $definition['label'] . ' — ' . strtoupper( $language ), 'type' => 'repeater', 'layout' => 'block', 'sub_fields' => $sub_fields );
 		}
 	}
+
+	foreach ( nada_data( 'section-images' ) as $name => $image ) {
+		if ( ! in_array( $image['page'], array( 'recipes', 'products' ), true ) ) { continue; }
+		foreach ( array( 'en', 'ar' ) as $language ) {
+			$fields[] = array( 'key' => 'field_nada_' . $name . '_' . $language, 'name' => $name . '_' . $language, 'label' => ucfirst( $image['page'] ) . ' ' . $image['label'] . ' — ' . strtoupper( $language ), 'type' => 'image', 'return_format' => 'id', 'preview_size' => 'thumbnail' );
+		}
+	}
+	$fields[] = array( 'key' => 'field_nada_options_translation', 'label' => 'Language Translation', 'type' => 'tab' );
 	$fields[] = array( 'key' => 'field_nada_ui_labels', 'name' => 'ui_labels', 'label' => 'Site labels and messages', 'type' => 'repeater', 'layout' => 'table', 'sub_fields' => array( array( 'key' => 'field_nada_ui_key', 'name' => 'key', 'label' => 'Label reference', 'type' => 'text', 'readonly' => 1 ), nada_acf_text( 'ui_en', 'English' ), nada_acf_text( 'ui_ar', 'Arabic' ) ) );
 	$fields[] = array( 'key' => 'field_nada_options_social', 'label' => 'Social Media', 'type' => 'tab' );
-	$fields[] = array( 'key' => 'field_nada_social_links', 'name' => 'social_links', 'label' => 'Social media links', 'type' => 'repeater', 'layout' => 'table', 'sub_fields' => array( nada_acf_text( 'social_label', 'Name' ), array( 'key' => 'field_nada_social_url', 'name' => 'social_url', 'label' => 'URL', 'type' => 'url' ) ) );
+	$fields[] = array( 'key' => 'field_nada_social_links', 'name' => 'social_links', 'label' => 'Social media links', 'type' => 'repeater', 'layout' => 'table', 'sub_fields' => array( nada_acf_text( 'social_label', 'Name' ), array( 'key' => 'field_nada_social_url', 'name' => 'social_url', 'label' => 'Link', 'type' => 'link', 'return_format' => 'array' ) ) );
 	$fields[] = array( 'key' => 'field_nada_options_contact', 'label' => 'Contact', 'type' => 'tab' );
 	$fields[] = nada_acf_text( 'contact_email', 'Email', 'email' );
 	$fields[] = nada_acf_text( 'contact_phone', 'Phone' );

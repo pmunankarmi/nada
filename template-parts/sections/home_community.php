@@ -8,9 +8,9 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 <section class="oband oband--left" id="community" tabindex="-1">
- <div class="oband__bg oband__bg--wide" style="background-image:url(<?php echo esc_url( nada_asset( 'assets/img/bands/band-community.jpg' ) ); ?>)">
+ <div class="oband__bg oband__bg--wide" style="background-image:url(<?php echo esc_url( nada_section_image( 'home_community_background_desktop' ) ); ?>)">
  </div>
- <div class="oband__bg oband__bg--sq" style="background-image:url(<?php echo esc_url( nada_asset( 'assets/img/bands/band-community-sq.jpg' ) ); ?>)">
+ <div class="oband__bg oband__bg--sq" style="background-image:url(<?php echo esc_url( nada_section_image( 'home_community_background_mobile' ) ); ?>)">
  </div>
  <div class="oband__scrim">
  </div>
@@ -28,8 +28,8 @@ defined( 'ABSPATH' ) || exit;
     </span>
    </h2>
    <div class="hbanner__cta reveal">
-    <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_copy( 'home_community_link_1' ) ); ?>">
-     <?php echo esc_html( nada_copy( 'home_community_share_your_recipe' ) ); ?>
+    <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_link_url( nada_copy( 'home_community_link_1' ) ) ); ?>"<?php echo nada_link_target( nada_copy( 'home_community_link_1' ) ); ?>>
+     <?php echo esc_html( nada_link_label( nada_copy( 'home_community_link_1' ), nada_copy( 'home_community_share_your_recipe' ) ) ); ?>
     </a>
    </div>
   </div>

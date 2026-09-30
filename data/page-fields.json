@@ -313,44 +313,44 @@
   },
   "recipes_section_4_link_1": {
     "page": "recipes",
-    "label": "Button URL",
-    "type": "text",
+    "label": "Button link",
+    "type": "link",
     "default": ""
   },
   "home_community_link_1": {
     "page": "home",
-    "label": "Button URL",
-    "type": "text",
+    "label": "Button link",
+    "type": "link",
     "default": ""
   },
   "home_recipes_link_1": {
     "page": "home",
-    "label": "Button URL",
-    "type": "text",
+    "label": "Button link",
+    "type": "link",
     "default": ""
   },
   "home_hero_link_1": {
     "page": "home",
-    "label": "Button URL",
-    "type": "text",
+    "label": "Button link",
+    "type": "link",
     "default": ""
   },
   "why_section_4_link_1": {
     "page": "why",
-    "label": "Button URL",
-    "type": "text",
+    "label": "Button link",
+    "type": "link",
     "default": ""
   },
   "home_section_8_link_1": {
     "page": "home",
-    "label": "Button URL",
-    "type": "text",
+    "label": "Button link",
+    "type": "link",
     "default": ""
   },
   "products_section_3_link_1": {
     "page": "products",
-    "label": "Button URL",
-    "type": "text",
+    "label": "Button link",
+    "type": "link",
     "default": ""
   }
 }

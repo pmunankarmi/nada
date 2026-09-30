@@ -29,8 +29,8 @@ defined( 'ABSPATH' ) || exit;
       <?php echo esc_html( nada_copy( 'home_hero_greek_wins_everyday' ) ); ?>
      </h1>
      <div class="hbanner__cta">
-      <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_copy( 'home_hero_link_1' ) ); ?>">
-       <?php echo esc_html( nada_copy( 'home_hero_see_the_wins_yourself' ) ); ?>
+      <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_link_url( nada_copy( 'home_hero_link_1' ) ) ); ?>"<?php echo nada_link_target( nada_copy( 'home_hero_link_1' ) ); ?>>
+       <?php echo esc_html( nada_link_label( nada_copy( 'home_hero_link_1' ), nada_copy( 'home_hero_see_the_wins_yourself' ) ) ); ?>
       </a>
      </div>
      <p class="herosub">

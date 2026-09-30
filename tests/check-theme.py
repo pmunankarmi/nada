@@ -19,7 +19,7 @@ for path in php_files:
         assert (root / asset).exists() or asset in media, f'Missing artwork: {asset}'
 fields = json.loads((root / 'data/page-fields.json').read_text())
 for field in fields.values():
-    assert field['type'] in {'text', 'textarea'}
+    assert field['type'] in {'text', 'textarea', 'link'}
     assert not re.search(r'<[^>]+>', field['default']), 'Markup in custom field default'
 library = json.loads((root / 'data/library.json').read_text())
 assert len(library['KORA']['RECIPES']) == 19

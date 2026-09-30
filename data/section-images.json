@@ -1,0 +1,52 @@
+{
+  "home_community_background_mobile": {
+    "page": "home",
+    "path": "assets/img/bands/band-community-sq.jpg",
+    "label": "Background \u2014 mobile"
+  },
+  "home_community_background_desktop": {
+    "page": "home",
+    "path": "assets/img/bands/band-community.jpg",
+    "label": "Background \u2014 desktop"
+  },
+  "home_recipes_background_mobile": {
+    "page": "home",
+    "path": "assets/img/bands/band-recipes-sq-v3.jpg",
+    "label": "Background \u2014 mobile"
+  },
+  "home_recipes_background_desktop": {
+    "page": "home",
+    "path": "assets/img/bands/band-recipes-v3.jpg",
+    "label": "Background \u2014 desktop"
+  },
+  "why_section_4_background_mobile": {
+    "page": "why",
+    "path": "assets/img/bands/band-transition-sq-v7.jpg",
+    "label": "Background \u2014 mobile"
+  },
+  "why_section_4_background_desktop": {
+    "page": "why",
+    "path": "assets/img/bands/band-transition-v7.jpg",
+    "label": "Background \u2014 desktop"
+  },
+  "home_section_8_background_mobile": {
+    "page": "home",
+    "path": "assets/img/bands/band-transition-sq-v7.jpg",
+    "label": "Background \u2014 mobile"
+  },
+  "home_section_8_background_desktop": {
+    "page": "home",
+    "path": "assets/img/bands/band-transition-v7.jpg",
+    "label": "Background \u2014 desktop"
+  },
+  "products_section_3_background_mobile": {
+    "page": "products",
+    "path": "assets/img/bands/band-recipes-sq-v3.jpg",
+    "label": "Background \u2014 mobile"
+  },
+  "products_section_3_background_desktop": {
+    "page": "products",
+    "path": "assets/img/bands/band-recipes-v3.jpg",
+    "label": "Background \u2014 desktop"
+  }
+}

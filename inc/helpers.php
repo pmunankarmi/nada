@@ -110,3 +110,24 @@ function nada_option( $name, $default = '' ) {
 function nada_default_menu() {
 	wp_page_menu( array( 'show_home' => true ) );
 }
+
+/** Accept migrated ACF links and older URL strings during an update. */
+function nada_link_url( $link ) {
+	return is_array( $link ) ? ( $link['url'] ?? '' ) : (string) $link;
+}
+
+function nada_link_label( $link, $fallback ) {
+	return is_array( $link ) && ! empty( $link['title'] ) ? $link['title'] : $fallback;
+}
+
+/** Return only controlled target attributes; URLs are escaped in their templates. */
+function nada_link_target( $link ) {
+	return is_array( $link ) && '_blank' === ( $link['target'] ?? '' ) ? ' target="_blank" rel="noopener noreferrer"' : '';
+}
+
+/** Section images are chosen per translated page or archive options. */
+function nada_section_image( $name ) {
+	$definition = nada_data( 'section-images' )[ $name ] ?? array();
+	$id = in_array( $definition['page'] ?? '', array( 'recipes', 'products' ), true ) ? nada_option( $name . '_' . nada_language(), 0 ) : nada_field( $name, 0 );
+	return wp_get_attachment_image_url( absint( $id ), 'full' ) ?: '';
+}

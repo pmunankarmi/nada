@@ -11,11 +11,22 @@ defined( 'ABSPATH' ) || exit;
 	<div class="foot__wave" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,70 L0,34 C240,4 480,58 720,44 C960,30 1200,-4 1440,20 L1440,70 Z" fill="currentColor"/></svg></div>
 	<div class="foot__top">
 		<div class="foot__brand">
-			<span class="foot__brandlogo"><?php if ( has_custom_logo() ) { the_custom_logo(); } else { ?><?php bloginfo( 'name' ); ?><?php } ?></span>
+			<span class="foot__brandlogo"><?php $footer_logo = absint( nada_option( 'footer_logo', 0 ) ); if ( $footer_logo ) { echo wp_get_attachment_image( $footer_logo, 'full' ); } elseif ( has_custom_logo() ) { the_custom_logo(); } else { bloginfo( 'name' ); } ?></span>
 			<p class="foot__slogan"><?php echo esc_html( nada_option( 'footer_text_' . nada_language(), '' ) ); ?></p>
 		</div>
 		<nav class="foot__cols" aria-label="<?php echo esc_attr( nada_text( 'Footer' ) ); ?>">
-			<?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'nada-menu', 'fallback_cb' => 'nada_default_menu' ) ); ?>
+			<div class="foot__links">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'nada-menu', 'fallback_cb' => 'nada_default_menu' ) ); ?>
+			</div>
+			<div class="foot__followcol">
+				<div class="foot__social">
+					<?php foreach ( (array) nada_option( 'social_links', array() ) as $social ) : ?>
+						<a href="<?php echo esc_url( nada_link_url( $social['social_url'] ) ); ?>" <?php echo nada_link_target( $social['social_url'] ); ?> aria-label="<?php echo esc_attr( nada_link_label( $social['social_url'], $social['social_label'] ) ); ?>">
+							<?php get_template_part( 'template-parts/social-icon', null, array( 'name' => $social['social_label'] ) ); ?>
+						</a>
+					<?php endforeach; ?>
+				</div>
+			</div>
 		</nav>
 		<?php
 		$contact_email = sanitize_email( nada_option( 'contact_email', '' ) );
@@ -30,11 +41,6 @@ defined( 'ABSPATH' ) || exit;
 			</address>
 		<?php endif; ?>
 
-		<div class="foot__social">
-			<?php foreach ( (array) nada_option( 'social_links', array() ) as $social ) : ?>
-				<a href="<?php echo esc_url( $social['social_url'] ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $social['social_label'] ); ?></a>
-			<?php endforeach; ?>
-		</div>
 	</div>
 </footer>
 <?php wp_footer(); ?>
