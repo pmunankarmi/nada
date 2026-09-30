@@ -1,0 +1,38 @@
+{
+  "submission_admin_subject": {
+    "label": "Admin notification subject",
+    "type": "text",
+    "default": "{site_name} — New recipe submission: {recipe_title}",
+    "instructions": "Plain text. Available placeholders: {site_name}, {recipe_title}, {submitter_email}, {ingredients}, {method}, {review_url}."
+  },
+  "submission_admin_body": {
+    "label": "Admin notification message",
+    "type": "textarea",
+    "default": "A recipe has been submitted for review.\n\nRecipe: {recipe_title}\nSubmitter: {submitter_email}\n\nIngredients:\n{ingredients}\n\nMethod:\n{method}\n\nReview: {review_url}",
+    "instructions": "Plain text. Available placeholders: {site_name}, {recipe_title}, {submitter_email}, {ingredients}, {method}, {review_url}."
+  },
+  "submission_confirmation_subject_en": {
+    "label": "Submitter acknowledgement subject — English",
+    "type": "text",
+    "default": "We received your recipe — {site_name}",
+    "instructions": "Plain text. Available placeholders: {site_name}, {recipe_title}, {submitter_email}."
+  },
+  "submission_confirmation_body_en": {
+    "label": "Submitter acknowledgement message — English",
+    "type": "textarea",
+    "default": "Thank you for sharing your recipe, \"{recipe_title}\", with {site_name}.\n\nYour submission has been received and is awaiting review. It has not been published yet.",
+    "instructions": "Plain text. Available placeholders: {site_name}, {recipe_title}, {submitter_email}."
+  },
+  "submission_confirmation_subject_ar": {
+    "label": "Submitter acknowledgement subject — Arabic",
+    "type": "text",
+    "default": "تم استلام وصفتك — {site_name}",
+    "instructions": "Plain text. Available placeholders: {site_name}, {recipe_title}, {submitter_email}."
+  },
+  "submission_confirmation_body_ar": {
+    "label": "Submitter acknowledgement message — Arabic",
+    "type": "textarea",
+    "default": "شكراً لمشاركة وصفتك «{recipe_title}» مع {site_name}.\n\nتم استلام وصفتك وهي بانتظار المراجعة. لم يتم نشرها بعد.",
+    "instructions": "Plain text. Available placeholders: {site_name}, {recipe_title}, {submitter_email}."
+  }
+}
