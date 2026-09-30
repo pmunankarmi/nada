@@ -52,3 +52,36 @@ add_action( 'load-update-core.php', function () {
 		delete_transient( 'nada_github_release' );
 	}
 } );
+
+add_action( 'admin_menu', function () {
+	add_theme_page( 'NADA Updates', 'NADA Updates', 'update_themes', 'nada-updates', 'nada_updates_screen' );
+} );
+
+/** Allow administrators to diagnose host connectivity without exposing credentials. */
+function nada_updates_screen() {
+	if ( ! current_user_can( 'update_themes' ) ) { return; }
+	$message = '';
+	if ( isset( $_POST['nada_updates_nonce'] ) ) {
+		check_admin_referer( 'nada_updates', 'nada_updates_nonce' );
+		delete_transient( 'nada_github_release' );
+		$response = wp_remote_get( 'https://api.github.com/repos/pmunankarmi/nada/releases/latest', array( 'timeout' => 15, 'headers' => array( 'Accept' => 'application/vnd.github+json', 'User-Agent' => 'NADA-WordPress-Theme' ) ) );
+		if ( is_wp_error( $response ) ) {
+			$message = $response->get_error_message();
+		} else {
+			$body = json_decode( wp_remote_retrieve_body( $response ), true );
+			$message = 'GitHub HTTP ' . wp_remote_retrieve_response_code( $response ) . ': ' . ( $body['tag_name'] ?? $body['message'] ?? 'No release metadata returned.' );
+		}
+		delete_site_transient( 'update_themes' );
+		wp_update_themes();
+	}
+	?>
+	<div class="wrap">
+		<h1>NADA Updates</h1>
+		<p>Installed version: <?php echo esc_html( wp_get_theme( get_template() )->get( 'Version' ) ); ?></p>
+		<?php if ( $message ) : ?><div class="notice notice-info"><p><?php echo esc_html( $message ); ?></p></div><?php endif; ?>
+		<p>Each push to the repository's main branch publishes a versioned theme release. WordPress checks for updates automatically. Use this check to refresh release metadata and test GitHub connectivity.</p>
+		<form method="post"><?php wp_nonce_field( 'nada_updates', 'nada_updates_nonce' ); submit_button( 'Check GitHub connection and updates' ); ?></form>
+		<p><a href="<?php echo esc_url( admin_url( 'update-core.php' ) ); ?>">Open WordPress Updates</a></p>
+	</div>
+	<?php
+}
