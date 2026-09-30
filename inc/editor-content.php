@@ -26,7 +26,7 @@ function nada_starter_link( $target, $language, $pages ) {
 }
 
 function nada_seed_editor_content() {
-	if ( ! function_exists( 'get_field' ) || get_option( 'nada_editor_content_version' ) === '2' ) { return; }
+	if ( ! function_exists( 'get_field' ) || get_option( 'nada_editor_content_version' ) === '3' ) { return; }
 	$pages = get_option( 'nada_import_pages', array() );
 	if ( ! $pages ) { return; }
 	$artwork = get_option( 'nada_artwork_posts', array() );
@@ -110,7 +110,22 @@ function nada_seed_editor_content() {
 			set_theme_mod( 'nav_menu_locations', $locations );
 		}
 	}
-	update_option( 'nada_editor_content_version', '2', false );
+	// Polylang stores menu assignments per language in addition to native locations.
+	if ( function_exists( 'PLL' ) && method_exists( PLL()->options, 'set' ) ) {
+		$assignments = PLL()->options->get( 'nav_menus' );
+		$theme = get_option( 'stylesheet' );
+		foreach ( array_keys( $pages ) as $language ) {
+			$menu = wp_get_nav_menu_object( 'NADA navigation ' . strtoupper( $language ) );
+			if ( ! $menu ) { continue; }
+			foreach ( array( 'primary', 'footer' ) as $location ) {
+				if ( empty( $assignments[ $theme ][ $location ][ $language ] ) ) {
+					$assignments[ $theme ][ $location ][ $language ] = $menu->term_id;
+				}
+			}
+		}
+		PLL()->options->set( 'nav_menus', $assignments );
+	}
+	update_option( 'nada_editor_content_version', '3', false );
 }
 add_action( 'admin_init', function () {
 	if ( current_user_can( 'edit_theme_options' ) ) { nada_seed_editor_content(); }
