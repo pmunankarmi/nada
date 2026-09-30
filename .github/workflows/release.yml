@@ -1,0 +1,28 @@
+name: Build WordPress theme update
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: nada-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate PHP
+        run: find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l
+      - name: Validate theme structure
+        run: python3 tests/check-theme.py
+      - name: Package a unique, increasing version
+        run: |
+          VERSION="1.0.${GITHUB_RUN_NUMBER}"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          python3 tools/package.py --version "$VERSION"
+      - name: Publish admin-installable theme update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "v${VERSION}" dist/nada.zip --title "NADA ${VERSION}" --notes "WordPress theme build from commit ${GITHUB_SHA}." --target "$GITHUB_SHA" --latest

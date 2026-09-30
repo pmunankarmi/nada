@@ -1,0 +1,1137 @@
+{
+  "KORA": {
+    "FLAVORS": [
+      {
+        "id": "plain-full",
+        "name": "Plain",
+        "accent": "#1E6FB5",
+        "deep": "#1E6FB5",
+        "tint": "#E8F1FA"
+      },
+      {
+        "id": "plain-low",
+        "name": "Plain Low Fat",
+        "accent": "#4A90C8",
+        "deep": "#4A90C8",
+        "tint": "#EAF3FB"
+      },
+      {
+        "id": "plain-zero",
+        "name": "Plain 0% Fat",
+        "accent": "#0B4F9C",
+        "deep": "#0B4F9C",
+        "tint": "#E4EDF8"
+      },
+      {
+        "id": "strawberry-full",
+        "name": "Strawberry Full Fat",
+        "accent": "#D8324B",
+        "deep": "#D8324B",
+        "tint": "#FBE8EB"
+      },
+      {
+        "id": "strawberry-low",
+        "name": "Strawberry Low Fat",
+        "accent": "#E0607A",
+        "deep": "#E0607A",
+        "tint": "#FBECF0"
+      },
+      {
+        "id": "blueberry-fullcream",
+        "name": "Blueberry Full Fat",
+        "accent": "#5B4A9E",
+        "deep": "#5B4A9E",
+        "tint": "#ECE9F6"
+      },
+      {
+        "id": "blueberry-low",
+        "name": "Blueberry Low Fat",
+        "accent": "#7C6BB5",
+        "deep": "#7C6BB5",
+        "tint": "#EFEDF8"
+      },
+      {
+        "id": "mixedberries-full",
+        "name": "Mixed Berries Full Fat",
+        "accent": "#7A3E8F",
+        "deep": "#7A3E8F",
+        "tint": "#F1E8F4"
+      },
+      {
+        "id": "mixedberry",
+        "name": "Mixed Berry 0% Fat",
+        "accent": "#6B2C91",
+        "deep": "#6B2C91",
+        "tint": "#EFE6F4"
+      },
+      {
+        "id": "blackberry-rasp",
+        "name": "Blackberry & Raspberry",
+        "accent": "#8E2F6B",
+        "deep": "#8E2F6B",
+        "tint": "#F5E7F0"
+      },
+      {
+        "id": "mango",
+        "name": "Mango & Peach 0% Fat",
+        "accent": "#E8931C",
+        "deep": "#E8931C",
+        "tint": "#FCF0E0"
+      },
+      {
+        "id": "honey",
+        "name": "Natural Honey",
+        "accent": "#D9A21B",
+        "deep": "#D9A21B",
+        "tint": "#FBF3DF"
+      },
+      {
+        "id": "date-full",
+        "name": "Date Full Fat",
+        "accent": "#8A5A2B",
+        "deep": "#8A5A2B",
+        "tint": "#F3E9DE"
+      },
+      {
+        "id": "lemon-mint",
+        "name": "Lemon & Mint",
+        "accent": "#8CBF3F",
+        "deep": "#8CBF3F",
+        "tint": "#EFF6E3"
+      }
+    ],
+    "RECIPES": [
+      {
+        "id": "protein-coleslaw",
+        "title": "High Protein Coleslaw",
+        "cat": "Savoury",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/protein-coleslaw-en.jpg",
+        "imageAr": "assets/img/recipes/final/protein-coleslaw-ar.jpg",
+        "ingredients": [
+          "3 cups cabbage, shredded",
+          "1 carrot, grated",
+          "¼ red onion, thinly sliced",
+          "¾ cup Nada Greek Yogurt",
+          "1 tbsp Dijon mustard",
+          "1 tbsp lemon juice",
+          "1 tsp honey",
+          "½ tsp Salt",
+          "¼ tsp black pepper",
+          "1 tbsp parsley, chopped"
+        ],
+        "steps": [
+          "In a large bowl, combine the cabbage, carrot, and red onion.",
+          "In a separate bowl, whisk together Nada Greek Yogurt, Dijon mustard, lemon juice, honey, salt, and black pepper.",
+          "Pour the dressing over the vegetables and toss until evenly coated.",
+          "Garnish with chopped parsley and serve with chicken strips."
+        ],
+        "tags": [
+          "Savoury"
+        ]
+      },
+      {
+        "id": "beef-stroganoff",
+        "title": "Creamy Beef Stroganoff",
+        "cat": "Savoury",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/beef-stroganoff-en.jpg",
+        "imageAr": "assets/img/recipes/final/beef-stroganoff-ar.jpg",
+        "ingredients": [
+          "300 g beef sirloin, thinly sliced",
+          "1 tbsp olive oil",
+          "250 g mushrooms, sliced",
+          "1 onion, finely diced",
+          "2 garlic cloves, minced",
+          "1 tsp paprika",
+          "1 tbsp Dijon mustard",
+          "1 cup beef broth",
+          "1 cup Nada Greek Yogurt",
+          "½ tsp Salt",
+          "½ tsp black pepper",
+          "Parsley, chopped",
+          "Cooked rice, for serving"
+        ],
+        "steps": [
+          "Heat the olive oil in a large pan and sear the beef until browned. Remove and set aside.",
+          "In the same pan, cook the onion and mushrooms until softened, then add the garlic and paprika.",
+          "Stir in the Dijon mustard and beef broth, then simmer for 5 minutes.",
+          "Reduce the heat and stir in Nada Greek Yogurt until smooth.",
+          "Return the beef to the pan and cook for 2–3 minutes.",
+          "Garnish with parsley and serve over cooked rice."
+        ],
+        "tags": [
+          "Savoury"
+        ]
+      },
+      {
+        "id": "protein-pancakes",
+        "title": "Greek Yogurt Protein Pancakes",
+        "cat": "Breakfast",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/protein-pancakes-en.jpg",
+        "imageAr": "assets/img/recipes/final/protein-pancakes-ar.jpg",
+        "ingredients": [
+          "1 cup Nada Greek Yogurt",
+          "2 eggs",
+          "1 cup oat flour",
+          "1 tsp baking powder",
+          "1 tsp vanilla extract",
+          "1 tbsp honey",
+          "Butter for cooking",
+          "Fresh berries, for serving"
+        ],
+        "steps": [
+          "In a bowl, whisk together Nada Greek Yogurt, eggs, vanilla, and honey.",
+          "Add the oat flour and baking powder, then mix until smooth.",
+          "Heat a lightly greased pan over medium heat.",
+          "Spoon the batter into the pan and cook until bubbles appear.",
+          "Flip and cook until golden.",
+          "Serve with fresh berries and a drizzle of honey."
+        ],
+        "tags": [
+          "Breakfast"
+        ]
+      },
+      {
+        "id": "no-bake-cheesecake",
+        "title": "No-Bake Greek Yogurt Cheesecake",
+        "cat": "Dessert",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/no-bake-cheesecake-en.jpg",
+        "imageAr": "assets/img/recipes/final/no-bake-cheesecake-ar.jpg",
+        "ingredients": [
+          "200 g digestive biscuits",
+          "80 g melted butter",
+          "1 cup Nada Greek Yogurt",
+          "200 g cream cheese, softened",
+          "1 pack stevia sugar",
+          "1 tsp vanilla extract",
+          "1 tbsp lemon zest",
+          "Mixed berries, for garnish"
+        ],
+        "steps": [
+          "Crush the biscuits and combine with the melted butter.",
+          "Press into the base of a serving dish or individual cups and chill.",
+          "Beat together the cream cheese, Nada Greek Yogurt, sugar, vanilla, and lemon zest until smooth.",
+          "Spoon over the biscuit base.",
+          "Refrigerate for at least 4 hours until set.",
+          "Garnish with fresh mixed berries before serving."
+        ],
+        "tags": [
+          "Dessert"
+        ]
+      },
+      {
+        "id": "berry-matcha-smoothie",
+        "title": "Mixed Berry and Matcha Greek Yogurt Smoothie",
+        "cat": "Drink",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/berry-matcha-smoothie-en.jpg",
+        "imageAr": "assets/img/recipes/final/berry-matcha-smoothie-ar.jpg",
+        "ingredients": [
+          "1 cup Nada Greek Yogurt",
+          "1 cup mixed berries, frozen",
+          "½ cup milk",
+          "1 tbsp honey",
+          "1 tsp matcha powder",
+          "1 tbsp pistachios"
+        ],
+        "steps": [
+          "Add Nada Greek Yogurt, berries, milk, matcha, pistachio and honey to a blender.",
+          "Blend until smooth and creamy.",
+          "Pour into serving glasses and enjoy immediately."
+        ],
+        "tags": [
+          "Drink"
+        ]
+      },
+      {
+        "id": "blueberry-lemon-smoothie",
+        "title": "Blueberry Lemon Greek Yogurt Breakfast Smoothie",
+        "cat": "Drink",
+        "pair": "blueberry-fullcream",
+        "image": "assets/img/recipes/final/blueberry-lemon-smoothie.jpg",
+        "blurb": "A refreshing blend of blueberries, Greek yogurt and oats with a bright touch of lemon.",
+        "prep": "5 minutes",
+        "cook": "None",
+        "total": "5 minutes",
+        "serves": "2",
+        "ingredients": [
+          "300 g NADA Blueberry Full Fat Greek Yogurt",
+          "150 g frozen blueberries",
+          "250 ml milk",
+          "30 g rolled oats",
+          "1 tsp lemon zest",
+          "1 tsp honey"
+        ],
+        "steps": [
+          "Blend all the ingredients until smooth and fully combined.",
+          "Rest for 1 minute, then blend again for an even creamier texture.",
+          "Serve cold."
+        ],
+        "tags": [
+          "Drink"
+        ]
+      },
+      {
+        "id": "mango-cardamom-lassi",
+        "title": "Mango Cardamom Greek Yogurt Lassi",
+        "cat": "Drink",
+        "pair": "mango",
+        "image": "assets/img/recipes/final/mango-cardamom-lassi.jpg",
+        "blurb": "A cold, refreshing mango and Greek yogurt drink fragrant with cardamom.",
+        "prep": "5 minutes",
+        "cook": "None",
+        "total": "5 minutes",
+        "serves": "2",
+        "ingredients": [
+          "300 g NADA Mango and Peach Greek Yogurt",
+          "180 g frozen mango",
+          "180 ml cold milk",
+          "4 ice cubes",
+          "1/4 tsp ground cardamom",
+          "1 tsp lime juice"
+        ],
+        "steps": [
+          "Blend all the ingredients until smooth and fully combined.",
+          "Taste and add a little milk if you prefer a lighter consistency.",
+          "Pour into two chilled glasses and serve immediately."
+        ],
+        "tags": [
+          "Drink"
+        ]
+      },
+      {
+        "id": "berry-granola-parfait",
+        "title": "Greek Yogurt Berry Granola Parfait",
+        "cat": "Breakfast",
+        "pair": "strawberry-full",
+        "image": "assets/img/recipes/final/berry-granola-parfait.jpg",
+        "blurb": "Juicy berries, crisp granola and creamy strawberry Greek yogurt layered for a bright start to the day.",
+        "prep": "8 minutes",
+        "cook": "None",
+        "total": "8 minutes",
+        "serves": "2",
+        "ingredients": [
+          "300 g NADA Strawberry Greek Yogurt",
+          "120 g mixed berries",
+          "1 tsp lemon juice",
+          "1 tsp honey",
+          "70 g crisp granola",
+          "1 tbsp sliced almonds"
+        ],
+        "steps": [
+          "Toss the berries with the lemon juice and honey, then rest for 5 minutes.",
+          "Layer the yogurt, berries and granola in two glasses.",
+          "Finish with the sliced almonds and serve before the granola softens."
+        ],
+        "tags": [
+          "Breakfast"
+        ]
+      },
+      {
+        "id": "saffron-date-french-toast",
+        "title": "Saffron Date French Toast with Greek Yogurt",
+        "cat": "Breakfast",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/saffron-date-french-toast.jpg",
+        "blurb": "French toast scented with saffron and cardamom, topped with dates and a cool spoonful of creamy Greek yogurt.",
+        "prep": "15 minutes",
+        "cook": "10 minutes",
+        "total": "25 minutes",
+        "serves": "4",
+        "ingredients": [
+          "8 thick slices brioche or milk bread",
+          "3 eggs",
+          "180 ml milk",
+          "Pinch of saffron threads soaked in 1 tbsp warm milk",
+          "1/2 tsp ground cardamom",
+          "1 tbsp butter",
+          "300 g NADA Plain Greek Yogurt",
+          "100 g soft dates, pitted and chopped",
+          "2 tbsp honey",
+          "2 tbsp chopped pistachios"
+        ],
+        "steps": [
+          "Whisk the eggs, milk, saffron milk and cardamom in a shallow dish.",
+          "Dip the bread briefly on both sides, then cook in butter over medium heat for about 2 minutes per side until golden and cooked through.",
+          "Serve with Greek yogurt, dates, honey and pistachios."
+        ],
+        "tags": [
+          "Breakfast"
+        ]
+      },
+      {
+        "id": "whipped-feta-dip",
+        "title": "Creamy Whipped Feta and Greek Yogurt Dip",
+        "cat": "Dip",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/whipped-feta-dip.jpg",
+        "blurb": "A tangy, savoury dip finished with crushed chilli, honey and sesame.",
+        "prep": "10 minutes",
+        "cook": "None",
+        "total": "10 minutes",
+        "serves": "6",
+        "ingredients": [
+          "200 g feta cheese",
+          "250 g NADA Plain Greek Yogurt",
+          "1 tbsp olive oil",
+          "1 tsp lemon juice",
+          "1 tsp honey",
+          "Pinch of crushed chilli",
+          "1 tbsp sesame seeds"
+        ],
+        "steps": [
+          "Blend the feta, Greek yogurt, olive oil and lemon juice until smooth.",
+          "Spread the mixture in a shallow serving bowl.",
+          "Drizzle with honey and scatter over the crushed chilli and sesame seeds."
+        ],
+        "tags": [
+          "Dip"
+        ]
+      },
+      {
+        "id": "smoky-eggplant-mutabbal",
+        "title": "Smoky Eggplant Mutabbal with Greek Yogurt",
+        "cat": "Dip",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/smoky-eggplant-mutabbal.jpg",
+        "blurb": "Flame-charred eggplant blended with tahini and Greek yogurt for a smoky, creamy dip.",
+        "prep": "15 minutes",
+        "cook": "35 minutes",
+        "total": "50 minutes",
+        "serves": "6",
+        "ingredients": [
+          "2 large eggplants",
+          "250 g NADA Plain Greek Yogurt",
+          "2 tbsp tahini",
+          "1 garlic clove, grated",
+          "2 tbsp lemon juice",
+          "1/2 tsp salt",
+          "1 tbsp olive oil",
+          "2 tbsp pomegranate seeds",
+          "1 tbsp chopped parsley"
+        ],
+        "steps": [
+          "Roast the eggplants until the skins are charred and the flesh is soft. Cool, peel and drain for 10 minutes.",
+          "Mash the eggplant, then mix with the Greek yogurt, tahini, garlic, lemon juice and salt.",
+          "Spread in a shallow dish and garnish with olive oil, pomegranate seeds and parsley."
+        ],
+        "tags": [
+          "Dip"
+        ]
+      },
+      {
+        "id": "date-tiramisu-cups",
+        "title": "Greek Yogurt Date Tiramisu Cups",
+        "cat": "Dessert",
+        "pair": "date-full",
+        "image": "assets/img/recipes/final/date-tiramisu-cups.jpg",
+        "blurb": "Coffee-soaked biscuits, date Greek yogurt and cocoa layered into an easy egg-free dessert.",
+        "prep": "15 minutes",
+        "cook": "None",
+        "total": "2 hours 15 minutes",
+        "serves": "6",
+        "ingredients": [
+          "400 g NADA Date Greek Yogurt",
+          "120 ml strong coffee, cooled",
+          "12 ladyfinger biscuits",
+          "1 tbsp date syrup",
+          "1 tbsp cocoa powder",
+          "2 tbsp chopped hazelnuts"
+        ],
+        "steps": [
+          "Mix the date syrup with the date Greek yogurt.",
+          "Briefly dip the biscuits in the coffee, then layer them with the yogurt mixture in six glasses.",
+          "Chill for 2 hours, then dust with cocoa and chopped hazelnuts."
+        ],
+        "tags": [
+          "Dessert"
+        ]
+      },
+      {
+        "id": "lemon-yogurt-pasta",
+        "title": "Creamy Lemon Greek Yogurt Pasta",
+        "cat": "Savoury",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/lemon-yogurt-pasta.jpg",
+        "blurb": "Pasta coated in a creamy Greek yogurt sauce with lemon, spinach and black pepper.",
+        "prep": "10 minutes",
+        "cook": "15 minutes",
+        "total": "25 minutes",
+        "serves": "4",
+        "ingredients": [
+          "320 g pasta",
+          "300 g NADA Plain Greek Yogurt",
+          "40 g grated Parmesan",
+          "Zest and juice of 1 lemon",
+          "100 g baby spinach",
+          "1 garlic clove",
+          "Black pepper"
+        ],
+        "steps": [
+          "Cook the pasta and reserve 200 ml of the cooking water.",
+          "Mix the Greek yogurt, Parmesan, lemon and garlic. Remove the pasta from the heat, then toss it with the sauce, spinach and enough cooking water to loosen.",
+          "Season generously with black pepper and serve immediately."
+        ],
+        "tags": [
+          "Savoury"
+        ]
+      },
+      {
+        "id": "lamb-kofta-sumac",
+        "title": "Saudi-Spiced Lamb Kofta with Sumac Greek Yogurt",
+        "cat": "Savoury",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/lamb-kofta-sumac.jpg",
+        "blurb": "Grilled lamb kofta served with a cool, tangy sumac Greek yogurt sauce.",
+        "prep": "20 minutes",
+        "cook": "15 minutes",
+        "total": "35 minutes",
+        "serves": "4",
+        "ingredients": [
+          "500 g minced lamb",
+          "1 small onion, finely chopped",
+          "2 tbsp chopped parsley",
+          "1 tsp ground cumin",
+          "1 tsp ground coriander",
+          "1/4 tsp ground cinnamon",
+          "1 tsp salt",
+          "1 tbsp olive oil",
+          "300 g NADA Plain Greek Yogurt",
+          "1 tsp sumac, plus extra to garnish",
+          "1 tbsp lemon juice",
+          "1 small garlic clove, grated",
+          "Bread and fresh herbs, to serve"
+        ],
+        "steps": [
+          "Mix the lamb with the onion, parsley, cumin, coriander, cinnamon and salt, then shape around skewers or into small logs.",
+          "Brush with olive oil, then grill or pan-fry for 10 to 12 minutes, turning until cooked through and browned.",
+          "Mix the Greek yogurt with the sumac, lemon juice and garlic.",
+          "Serve the kofta with the sumac Greek yogurt, bread and fresh herbs."
+        ],
+        "tags": [
+          "Savoury"
+        ]
+      },
+      {
+        "id": "chicken-saleeg",
+        "title": "Yogurt-Marinated Chicken Saleeg",
+        "cat": "Savoury",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/chicken-saleeg.jpg",
+        "blurb": "Creamy Hijazi rice topped with yogurt-marinated chicken and served with fresh garlic Greek yogurt.",
+        "prep": "20 minutes + 1 hour marinating",
+        "cook": "50 minutes",
+        "total": "2 hours 10 minutes",
+        "serves": "6",
+        "ingredients": [
+          "1.2 kg chicken pieces",
+          "400 g NADA Plain Greek Yogurt, divided",
+          "2 garlic cloves, grated",
+          "1 tbsp lemon juice",
+          "1 tsp ground cumin",
+          "1/2 tsp ground cardamom",
+          "1 1/2 tsp salt, divided",
+          "300 g short-grain rice, rinsed",
+          "750 ml chicken stock",
+          "500 ml milk",
+          "2 tbsp butter",
+          "2 tbsp toasted almonds",
+          "Daqqus sauce, to serve"
+        ],
+        "steps": [
+          "Mix 200 g of the Greek yogurt with half the garlic, the lemon juice, cumin, cardamom and 1 tsp salt. Coat the chicken and marinate for 1 hour.",
+          "Roast the chicken in a preheated oven at 220 C for 35 to 40 minutes until golden and fully cooked.",
+          "Meanwhile, cook the rice in the stock over low heat until very soft. Add the milk and butter, stir until creamy, then season with the remaining salt.",
+          "Mix the remaining Greek yogurt with the remaining garlic. Serve the chicken over the saleeg with the garlic yogurt, toasted almonds and daqqus."
+        ],
+        "tags": [
+          "Savoury"
+        ]
+      },
+      {
+        "id": "avo-egg-toast",
+        "title": "Avo & Egg Toast",
+        "cat": "Breakfast",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/avo-egg-toast.jpg",
+        "ingredients": [
+          "2 slices sourdough bread, toasted",
+          "1 ripe avocado",
+          "2 eggs, poached",
+          "2 tbsp Nada Greek yogurt",
+          "1 tsp lemon juice",
+          "¼ tsp Salt",
+          "¼ tsp black pepper",
+          "Chili flakes"
+        ],
+        "steps": [
+          "Mash the avocado with the Greek yogurt, lemon juice, salt, and pepper until creamy.",
+          "Spread the mixture over the toasted bread.",
+          "Top with the eggs, finish with chili flakes and serve."
+        ],
+        "tags": [
+          "Breakfast"
+        ]
+      },
+      {
+        "id": "spinach-pasta",
+        "title": "Creamy Spinach Pasta",
+        "cat": "Savoury",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/spinach-pasta.jpg",
+        "ingredients": [
+          "250 g penne pasta",
+          "2 tsp olive oil",
+          "2 cloves garlic, minced",
+          "3 cups baby spinach",
+          "¾ cup Nada Greek yogurt",
+          "¼ cup grated Parmesan",
+          "2 tbsp pasta water",
+          "½ tsp Salt",
+          "½ tsp black pepper",
+          "Chili flakes"
+        ],
+        "steps": [
+          "Cook the pasta and reserve 2 tablespoons of pasta water.",
+          "Heat the olive oil and sauté the garlic for 30 seconds.",
+          "Add the spinach and cook until wilted.",
+          "Remove from the heat and stir in the Greek yogurt, Parmesan, and pasta water until smooth.",
+          "Toss with the cooked pasta and season with salt, pepper, and chili flakes."
+        ],
+        "tags": [
+          "Savoury"
+        ]
+      },
+      {
+        "id": "banana-smoothie",
+        "title": "Banana Smoothie",
+        "cat": "Drink",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/banana-smoothie.jpg",
+        "ingredients": [
+          "1 ripe banana",
+          "¾ cup Nada Greek yogurt",
+          "1 cup milk",
+          "1 tbsp honey",
+          "½ tsp vanilla extract",
+          "4 dates, pited",
+          "Ice cubes"
+        ],
+        "steps": [
+          "Add all the ingredients to a blender.",
+          "Blend until smooth and creamy.",
+          "Pour into a glass and serve immediately."
+        ],
+        "tags": [
+          "Drink"
+        ]
+      },
+      {
+        "id": "baked-potatoes",
+        "title": "Baked Potatoes",
+        "cat": "Savoury",
+        "pair": "plain-full",
+        "image": "assets/img/recipes/final/baked-potatoes.jpg",
+        "ingredients": [
+          "2 large baking potatoes",
+          "Olive oil",
+          "¾ cup Nada Greek yogurt",
+          "½ cup cheddar cheese, grated",
+          "2 tbsp spring onion, chopped",
+          "¼ tsp Salt",
+          "¼ tsp black pepper"
+        ],
+        "steps": [
+          "Rub potato in olive oil, cover with foil and bake in a preheated oven at 200°C for 50–60 minutes until tender.",
+          "Slice each potato open and fluff the inside with a fork and season with salt and pepper.",
+          "Top with the cheddar cheese, Greek yogurt and corn.",
+          "Finish with a sprinkle of spring onion and serve warm."
+        ],
+        "tags": [
+          "Savoury"
+        ]
+      }
+    ],
+    "CRAFT": [
+      {
+        "n": "01",
+        "title": "Fresh milk",
+        "text": "We start with whole milk from grass-fed herds, collected within hours and never from concentrate."
+      },
+      {
+        "n": "02",
+        "title": "Live cultures",
+        "text": "Gentle heat, then a family of live active cultures folded in to ferment slowly and naturally."
+      },
+      {
+        "n": "03",
+        "title": "The straining",
+        "text": "Here is the difference. We strain away the whey the traditional way — three parts milk to make one part yogurt."
+      },
+      {
+        "n": "04",
+        "title": "Nothing added",
+        "text": "What is left is impossibly thick, high in protein and pure. Fruit is folded in last, real and whole."
+      }
+    ]
+  },
+  "KORA_AR": {
+    "labels": {
+      "min": "دقيقة",
+      "serves": "الحصص",
+      "serves2": "الحصص",
+      "minutes": "دقيقة",
+      "pairs": "تناسب",
+      "prep": "طريقة التحضير",
+      "ing": "المكونات",
+      "mPrep": "التحضير",
+      "mCook": "الطهي",
+      "mTotal": "الإجمالي",
+      "mServes": "الحصص"
+    },
+    "cats": {
+      "Breakfast": "فطور",
+      "Dip": "تغميسات",
+      "Snack": "وجبة خفيفة",
+      "Dessert": "حلويات",
+      "Savoury": "أطباق مالحة",
+      "Drink": "مشروبات"
+    },
+    "flavors": {
+      "plain-full": "النكهة السادة",
+      "plain-low": "النكهة السادة قليلة الدسم",
+      "plain-zero": "النكهة السادة 0% دسم",
+      "strawberry-full": "نكهة الفراولة كاملة الدسم",
+      "strawberry-low": "نكهة الفراولة قليلة الدسم",
+      "blueberry-fullcream": "نكهة التوت الأزرق كاملة الدسم",
+      "blueberry-low": "نكهة التوت الأزرق قليلة الدسم",
+      "mixedberries-full": "نكهة التوت المشكّل كاملة الدسم",
+      "mixedberry": "نكهة التوت المشكّل 0% دسم",
+      "blackberry-rasp": "نكهة التوت الأسود وتوت العليق",
+      "mango": "نكهة المانجو والخوخ 0% دسم",
+      "honey": "نكهة العسل الطبيعي",
+      "date-full": "نكهة التمر كاملة الدسم",
+      "lemon-mint": "نكهة الليمون والنعناع"
+    },
+    "recipes": {
+      "protein-coleslaw": {
+        "title": "سلطة الكول سلو عالية البروتين",
+        "ingredients": [
+          "٣ أكواب ملفوف، مفروم",
+          "١ حبة جزر، مبشورة",
+          "¼ حبة بصل أحمر، شرائح رفيعة",
+          "¾ كوب ندى زبادي يوناني",
+          "١ م ك خردل ديجون",
+          "١ م ك عصير ليمون",
+          "١ م ص عسل",
+          "١/٢ م ص ملح",
+          "١/٤ م ص فلفل أسود",
+          "١ م ك بقدونس، مفروم"
+        ],
+        "steps": [
+          "في وعاء كبير، اخلطي الملفوف والجزر والبصل الأحمر.",
+          "في وعاء آخر، اخلطي زبادي ندى اليوناني مع خردل الديجون وعصير الليمون والعسل والملح والفلفل الأسود حتى يتجانس.",
+          "اسكبي الصوص فوق الخضار وقلبي جيدًا حتى تتغطى بالكامل.",
+          "زيني بالبقدونس المفروم وقدميها مباشرة مع الدجاج المقلي."
+        ]
+      },
+      "beef-stroganoff": {
+        "title": "ستروغانوف اللحم الكريمي بالزبادي اليوناني",
+        "ingredients": [
+          "٣٠٠ جرام شرائح لحم بقري",
+          "١ م ك زيت زيتون",
+          "٢٥٠ جرام فطر، شرائح",
+          "١ حبة بصل، مفرومة",
+          "٢ فص ثوم، مفروم",
+          "١ م ص بابريكا",
+          "١ م ك خردل ديجون",
+          "١ كوب مرق لحم",
+          "١ كوب ندى زبادي يوناني",
+          "١/٢ م ص ملح",
+          "١/٢ م ص فلفل أسود",
+          "بقدونس، مفروم",
+          "أرز مطبوخ، للتقديم"
+        ],
+        "steps": [
+          "سخني زيت الزيتون في مقلاة، ثم حمّري شرائح اللحم حتى تكتسب لونًا ذهبيًا، ثم ارفعيها جانبًا.",
+          "في نفس المقلاة، قلبي البصل والفطر حتى يذبلا، ثم أضيفي الثوم والبابريكا.",
+          "أضيفي خردل الديجون ومرق اللحم واتركي الخليط يغلي برفق لمدة ٥ دقائق.",
+          "خففي الحرارة ثم أضيفي زبادي ندى اليوناني وقلبي حتى يصبح الصوص ناعمًا وكريميًا.",
+          "أعيدي اللحم إلى المقلاة وقلبي لمدة ٢–٣ دقائق.",
+          "زيني بالبقدونس وقدميه مع نودلز البيض أو الأرز."
+        ]
+      },
+      "protein-pancakes": {
+        "title": "بانكيك البروتين بالزبادي اليوناني",
+        "ingredients": [
+          "١ كوب ندى زبادي يوناني",
+          "٢ بيض",
+          "١ كوب دقيق الشوفان",
+          "١ م ص بيكنج باودر",
+          "١ م ص فانيلا",
+          "١ م ك عسل",
+          "زبدة، لدهن المقلاة",
+          "توت مشكل، للتقديم"
+        ],
+        "steps": [
+          "في وعاء، اخفقي زبادي ندى اليوناني مع البيض، الفانيلا والعسل.",
+          "أضيفي دقيق الشوفان و البيكنج باودر وقلبي حتى تحصلي على خليط ناعم.",
+          "سخني مقلاة مدهونة بقليل من الزبدة أو الزيت على نار متوسطة.",
+          "اسكبي مقدارًا من الخليط واتركيه حتى تظهر الفقاعات على السطح.",
+          "اقلبيه واتركيه حتى يكتسب لونًا ذهبيًا من الجهتين.",
+          "قدميه مع التوت الطازج ورشة من العسل."
+        ]
+      },
+      "no-bake-cheesecake": {
+        "title": "تشيز كيك الزبادي اليوناني بدون فرن",
+        "ingredients": [
+          "٢٠٠ جرام بسكويت دايجستف",
+          "٨٠ جرام زبدة ذائبة",
+          "١ كوب ندى زبادي يوناني",
+          "٢٠٠ جرام جبنة كريمية، بدرجة حرارة الغرفة",
+          "١ ظرف سكر ستيفيا",
+          "١ م ص فانيلا",
+          "١ م ك برش ليمون",
+          "توت مشكل، للتزيين"
+        ],
+        "steps": [
+          "اطحني البسكويت واخلطيه مع الزبدة المذابة.",
+          "وزعي الخليط في قاعدة قالب أو أكواب التقديم واضغطي عليه جيدًا، ثم ضعيه في الثلاجة.",
+          "اخفقي الجبنة الكريمية مع زبادي ندى اليوناني والسكر والفانيلا و برش الليمون حتى يصبح الخليط ناعمًا.",
+          "اسكبي الخليط فوق طبقة البسكويت.",
+          "اتركيه في الثلاجة لمدة لا تقل عن ٤ ساعات حتى يتماسك.",
+          "زيني بالتوت المشكل وقدميه."
+        ]
+      },
+      "berry-matcha-smoothie": {
+        "title": "سموذي التوت و الماتشا بالزبادي اليوناني",
+        "ingredients": [
+          "١ كوب ندى زبادي يوناني",
+          "١ كوب توت مشكل، مجمد",
+          "½ كوب حليب",
+          "١ م ك عسل",
+          "١ م ص مسحوق الماتشا",
+          "١ م ك فستق"
+        ],
+        "steps": [
+          "ضعي زبادي ندى اليوناني مع التوت والحليب و الماتشا و الفستق و العسل في الخلاط.",
+          "اخلطي حتى تحصلي على قوام ناعم وكريمي.",
+          "اسكبيه في أكواب التقديم وقدميه مباشرة."
+        ]
+      },
+      "blueberry-lemon-smoothie": {
+        "title": "سموذي الفطور بالتوت الأزرق والليمون بالزبادي اليوناني",
+        "blurb": "سموذي منعش بالتوت الأزرق والزبادي اليوناني والشوفان، مع لمسة من الليمون.",
+        "prep": "٥ دقيقة",
+        "cook": "لا يوجد",
+        "total": "٥ دقيقة",
+        "serves": "٢",
+        "ingredients": [
+          "٣٠٠ غ زبادي ندى اليوناني بالتوت الأزرق كامل الدسم",
+          "١٥٠ غ توت أزرق مجمّد",
+          "٢٥٠ مل حليب",
+          "٣٠ غ شوفان",
+          "١ ملعقة صغيرة من بشر الليمون",
+          "١ ملعقة صغيرة عسل"
+        ],
+        "steps": [
+          "اخلطي جميع المكونات في الخلاط حتى يصبح المزيج ناعمًا ومتجانسًا.",
+          "اتركي المزيج لمدة دقيقة، ثم اخلطيه مرة أخرى حتى تحصلي على قوام أكثر نعومة.",
+          "قدميه بارد."
+        ]
+      },
+      "mango-cardamom-lassi": {
+        "title": "مشروب المانجو والزبادي اليوناني بالهيل",
+        "blurb": "مشروب بارد ومنعش من المانجو والزبادي اليوناني، بنكهة الهيل.",
+        "prep": "٥ دقيقة",
+        "cook": "لا يوجد",
+        "total": "٥ دقيقة",
+        "serves": "٢",
+        "ingredients": [
+          "٣٠٠ غ زبادي ندى اليوناني بالمانجو والخوخ",
+          "١٨٠ غ مانجو مجمّدة",
+          "١٨٠ مل حليب بارد",
+          "٤ مكعبات ثلج",
+          "١/٤ ملعقة صغيرة هيل مطحون",
+          "١ ملعقة صغيرة عصير ليمون أخضر"
+        ],
+        "steps": [
+          "اخلطي جميع المكونات حتى تحصلي على قوام ناعم ومتجانس.",
+          "تذوّقيه وأضيفي قليلاً من الحليب إذا رغبتِ بقوام أخف.",
+          "صبّيه في كأسين وهو بارد وقدّميه فوراً."
+        ]
+      },
+      "berry-granola-parfait": {
+        "title": "بارفيه التوت والغرانولا بالزبادي اليوناني",
+        "blurb": "توت طري وغرانولا مقرمشة وزبادي يوناني بنكهة الفراولة الكريمي في طبقات تبدأ بها صباحك صح.",
+        "prep": "٨ دقيقة",
+        "cook": "لا يوجد",
+        "total": "٨ دقيقة",
+        "serves": "٢",
+        "ingredients": [
+          "٣٠٠ غ زبادي ندى اليوناني بالفراولة",
+          "١٢٠ غ توت مشكل",
+          "١ ملعقة صغيرة عصير ليمون",
+          "١ ملعقة صغيرة عسل",
+          "٧٠ غ غرانولا مقرمشة",
+          "١ ملعقة كبيرة لوز شرائح"
+        ],
+        "steps": [
+          "اخلطي التوت مع عصير الليمون والعسل واتركيه ٥ دقائق.",
+          "وزّعي الزبادي والتوت والغرانولا في طبقات داخل كأسين.",
+          "زيّني باللوز وقدّميه قبل أن تلين الغرانولا."
+        ]
+      },
+      "saffron-date-french-toast": {
+        "title": "فرنش توست بالزعفران والتمر والزبادي",
+        "blurb": "فرنش توست بنكهة الزعفران والهيل، يعلوه التمر وملعقة من الزبادي اليوناني الكريمي.",
+        "prep": "١٥ دقيقة",
+        "cook": "١٠ دقيقة",
+        "total": "٢٥ دقيقة",
+        "serves": "٤",
+        "ingredients": [
+          "٨ شرائح سميكة من توست البريوش",
+          "٣ بيضات",
+          "١٨٠ مل حليب",
+          "رشة زعفران منقوعة في ملعقة كبيرة من الحليب الدافئ",
+          "١/٢ ملعقة صغيرة هيل مطحون",
+          "١ ملعقة كبيرة زبدة",
+          "٣٠٠ غ زبادي ندى اليوناني السادة",
+          "١٠٠ غ تمر طري منزوع النوى ومفروم",
+          "٢ ملعقة كبيرة عسل",
+          "٢ ملعقة كبيرة فستق مجروش"
+        ],
+        "steps": [
+          "اخفقي البيض والحليب وحليب الزعفران والهيل في وعاء متوسط العمق.",
+          "اغمسي الخبز من الجهتين بالخليط، ثم قلبيه بالزبدة على نار متوسطة مدة دقيقتين لكل جهة حتى يصبح ذهبي ومستوي.",
+          "قدّميه مع الزبادي اليوناني والتمر والعسل والفستق."
+        ]
+      },
+      "whipped-feta-dip": {
+        "title": "تغميسة الفيتا الكريمية بالزبادي اليوناني",
+        "blurb": "تغميسة لاذعة ومالحة، مع الفلفل المجروش والعسل والسمسم.",
+        "prep": "١٠ دقيقة",
+        "cook": "لا يوجد",
+        "total": "١٠ دقيقة",
+        "serves": "٦",
+        "ingredients": [
+          "٢٠٠ غ جبنة فيتا",
+          "٢٥٠ غ زبادي ندى اليوناني السادة",
+          "١ ملعقة كبيرة زيت زيتون",
+          "١ ملعقة صغيرة عصير ليمون",
+          "١ ملعقة صغيرة عسل",
+          "رشة فلفل مجروشة",
+          "١ ملعقة كبيرة سمسم"
+        ],
+        "steps": [
+          "اخلطي الفيتا والزبادي وزيت الزيتون والليمون حتى يصبح القوام ناعماً.",
+          "افردي الخلطة في وعاء مسطح.",
+          "وزّعي العسل وانثري الفلفل المجروش والسمسم."
+        ]
+      },
+      "smoky-eggplant-mutabbal": {
+        "title": "متبل باذنجان مدخن بالزبادي اليوناني",
+        "blurb": "باذنجان مشوي على النار مع الطحينة والزبادي اليوناني لتحضير تغميسة مدخنة وكريمية.",
+        "prep": "١٥ دقيقة",
+        "cook": "٣٥ دقيقة",
+        "total": "٥٠ دقيقة",
+        "serves": "٦",
+        "ingredients": [
+          "٢ حبة باذنجان كبيرة",
+          "٢٥٠ غ زبادي ندى اليوناني السادة",
+          "٢ ملعقة كبيرة طحينة",
+          "١ فص ثوم مبشور",
+          "٢ ملعقة كبيرة عصير ليمون",
+          "١/٢ ملعقة صغيرة ملح",
+          "١ ملعقة كبيرة زيت زيتون",
+          "٢ ملعقة كبيرة حب رمان",
+          "١ ملعقة كبيرة بقدونس مفروم"
+        ],
+        "steps": [
+          "اشوي الباذنجان في الفرن حتى ينشوي القشر ويلين من الداخل. اتركيه يبرد، ثم قشّريه وصفّيه لمدة ١٠ دقائق.",
+          "اهرسي الباذنجان، ثم اخلطيه مع الزبادي اليوناني والطحينة والثوم وعصير الليمون والملح.",
+          "وزّعيه في طبق مسطح، ثم زيّنيه بزيت الزيتون وحب الرمان والبقدونس."
+        ]
+      },
+      "date-tiramisu-cups": {
+        "title": "أكواب تيراميسو التمر بالزبادي اليوناني",
+        "blurb": "بسكويت بالقهوة وزبادي التمر اليوناني والكاكاو حلى سهل من دون بيض.",
+        "prep": "١٥ دقيقة",
+        "cook": "لا يوجد",
+        "total": "ساعتان و١٥ دقيقة",
+        "serves": "٦",
+        "ingredients": [
+          "٤٠٠ غ زبادي ندى اليوناني بالتمر",
+          "١٢٠ مل قهوة قوية ومبرّدة",
+          "١٢ قطعة بسكويت ليدي فنجر",
+          "١ ملعقة كبيرة دبس تمر",
+          "١ ملعقة كبيرة كاكاو بودرة",
+          "٢ ملعقة كبيرة بندق مجروش"
+        ],
+        "steps": [
+          "اخلطي دبس التمر مع الزبادي اليوناني بالتمر.",
+          "غمّسي قطع البسكويت في القهوة ورتّبيها مع الخلطة في ٦ كؤوس.",
+          "برّديها ساعتين ثم رشّي الكاكاو والبندق."
+        ]
+      },
+      "lemon-yogurt-pasta": {
+        "title": "مكرونة كريمية بصلصة الليمون والزبادي اليوناني",
+        "blurb": "مكرونة بصلصة الزبادي اليوناني الكريمية مع الليمون والسبانخ والفلفل الأسود.",
+        "prep": "١٠ دقيقة",
+        "cook": "١٥ دقيقة",
+        "total": "٢٥ دقيقة",
+        "serves": "٤",
+        "ingredients": [
+          "٣٢٠ غ مكرونة",
+          "٣٠٠ غ زبادي ندى اليوناني السادة",
+          "٤٠ غ بارميزان مبشور",
+          "عصير وبشر حبة ليمون واحدة",
+          "١٠٠ غ سبانخ صغيرة",
+          "١ فص ثوم",
+          "فلفل أسود"
+        ],
+        "steps": [
+          "اسلقي المكرونة وخلي ٢٠٠ مل من ماء السلق جانبًا.",
+          "اخلطي الزبادي والبارميزان والليمون والثوم معًا واضيفي المكرونة على الصلصة مع السبانخ والقليل من ماء السلق وقلّبيها.",
+          "رشي من الفلفل الأسود وقدّميها فوراً."
+        ]
+      },
+      "lamb-kofta-sumac": {
+        "title": "كفتة لحم مع صلصة الزبادي اليوناني بالسماق",
+        "blurb": "كفتة لحم مشوية تقدم مع زبادي السماق.",
+        "prep": "٢٠ دقيقة",
+        "cook": "١٥ دقيقة",
+        "total": "٣٥ دقيقة",
+        "serves": "٤",
+        "ingredients": [
+          "٥٠٠ غ لحم ضأن مفروم",
+          "١ بصلة صغيرة، مقطعة إلى قطع صغيرة",
+          "٢ ملعقة كبيرة بقدونس مفروم",
+          "١ ملعقة صغيرة كمون مطحون",
+          "١ ملعقة صغيرة كزبرة مطحونة",
+          "١/٤ ملعقة صغيرة قرفة مطحونة",
+          "١ ملعقة صغيرة ملح",
+          "١ ملعقة كبيرة زيت زيتون",
+          "٣٠٠ غ زبادي ندى اليوناني السادة",
+          "١ ملعقة صغيرة سماق، مع كمية إضافية للتزيين",
+          "١ ملعقة كبيرة عصير ليمون",
+          "١ فص ثوم صغير مبشور",
+          "خبز وأعشاب طازجة للتقديم"
+        ],
+        "steps": [
+          "اخلطي اللحم مع البصل والبقدونس والكمون والكزبرة والقرفة والملح، ثم شكّلي الخليط حول الأسياخ أو على شكل أصابع صغيرة.",
+          "ادهنيها بزيت الزيتون، ثم اشويها أو حمّريها في مقلاة مدة ١٠ إلى ١٢ دقيقة مع التقليب حتى تستوي وتتحمر.",
+          "اخلطي الزبادي اليوناني مع السماق والليمون والثوم.",
+          "قدّمي الكفتة مع خلطة الزبادي اليوناني بالسماق والخبز والأعشاب الطازجة."
+        ]
+      },
+      "chicken-saleeg": {
+        "title": "سليق بالدجاج المتبل بالزبادي اليوناني",
+        "blurb": "سليق كريمي مع دجاج متبل بالزبادي اليوناني، يُقدّم مع خلطة الزبادي اليوناني بالثوم.",
+        "prep": "٢٠ دقيقة + ساعة للتتبيل",
+        "cook": "٥٠ دقيقة",
+        "total": "ساعتان و١٠ دقائق",
+        "serves": "٦",
+        "ingredients": [
+          "١.٢ كغ قطع دجاج",
+          "٤٠٠ غ زبادي ندى اليوناني السادة",
+          "٢ فص ثوم مبشور",
+          "١ ملعقة كبيرة عصير ليمون",
+          "١ ملعقة صغيرة كمون مطحون",
+          "١/٢ ملعقة صغيرة هيل مطحون",
+          "١ ١/٢ ملعقة صغيرة ملح، مقسمة",
+          "٣٠٠ غ أرز قصير الحبة مغسول",
+          "٧٥٠ مل مرق دجاج",
+          "٥٠٠ مل حليب",
+          "٢ ملعقة كبيرة زبدة",
+          "٢ ملعقة كبيرة لوز محمص",
+          "صلصة دقوس للتقديم"
+        ],
+        "steps": [
+          "اخلطي ٢٠٠ غ من الزبادي اليوناني مع نصف كمية الثوم والليمون والكمون والهيل وملعقة صغيرة من الملح. غطّي الدجاج بالتتبيلة واتركيه ساعة.",
+          "اشوي الدجاج في فرن محمى على ٢٢٠ درجة مئوية مدة ٣٥ إلى ٤٠ دقيقة حتى يصبح ذهبياً ويستوي تماماً.",
+          "اطهي الأرز في المرق على نار هادئة حتى يصبح طرياً جداً. أضيفي الحليب والزبدة وحرّكي حتى يصبح كريمي القوام، ثم تبّليه ببقية الملح.",
+          "اخلطي بقية الزبادي مع بقية الثوم. قدّمي الدجاج فوق السليق مع مع خلطة الزبادي اليوناني بالثوم واللوز والدقوس."
+        ]
+      },
+      "avo-egg-toast": {
+        "title": "توست الأفوكادو والبيض",
+        "ingredients": [
+          "٢ شريحة من خبز الساوردو، محمصة",
+          "١ حبة أفوكادو ناضجة",
+          "٢ بيضة مسلوقة بطريقة البوشيه",
+          "٢ م ك ندى زبادي يوناني",
+          "١ م ص عصير ليمون",
+          "¼ م ص ملح",
+          "¼ م ص فلفل أسود",
+          "رقائق فلفل حار"
+        ],
+        "steps": [
+          "اهرسي الأفوكادو مع الزبادي اليوناني، عصير الليمون، الملح، والفلفل الأسود حتى تحصلي على خليط كريمي.",
+          "وزعي الخليط على شرائح الخبز المحمص.",
+          "ضعي البيض فوقه، ثم زيني برقائق الفلفل الحار وقدميه مباشرة."
+        ]
+      },
+      "spinach-pasta": {
+        "title": "باستا السبانخ الكريمية",
+        "ingredients": [
+          "٢٥٠ جرام باستا بيني",
+          "٢ م ص زيت زيتون",
+          "٢ فص ثوم، مفرومان",
+          "٣ أكواب سبانخ صغيرة",
+          "¾ كوب ندى زبادي يوناني",
+          "¼ كوب جبنة بارميزان، مبشورة",
+          "٢ م ك من ماء سلق الباستا",
+          "½ م ص ملح",
+          "½ م ص فلفل أسود",
+          "رقائق فلفل حار"
+        ],
+        "steps": [
+          "اسلقي الباستا واحتفظي بملعقتين كبيرتين من ماء السلق.",
+          "سخني زيت الزيتون ثم شوحي الثوم لمدة ٣٠ ثانية.",
+          "أضيفي السبانخ وقلبي حتى تذبل.",
+          "ارفعي المقلاة عن النار، ثم أضيفي الزبادي اليوناني، جبنة البارميزان، وماء سلق الباستا، وقلبي حتى يصبح الصوص ناعمًا وكريميًا.",
+          "أضيفي الباستا وقلبي حتى تتغطى بالصوص، ثم تبلي بالملح، الفلفل الأسود، ورقائق الفلفل الحار."
+        ]
+      },
+      "banana-smoothie": {
+        "title": "سموثي الموز",
+        "ingredients": [
+          "١ حبة موز ناضجة",
+          "¾ كوب ندى زبادي يوناني",
+          "١ كوب حليب",
+          "١ م ك عسل",
+          "½ م ص فانيلا",
+          "٤ حبات تمر، منزوعة النوى",
+          "مكعبات ثلج"
+        ],
+        "steps": [
+          "ضعي جميع المكونات في الخلاط.",
+          "اخلطي حتى تحصلي على قوام ناعم وكريمي.",
+          "اسكبيه في كوب التقديم وقدميه مباشرة."
+        ]
+      },
+      "baked-potatoes": {
+        "title": "بطاطس مشوية",
+        "ingredients": [
+          "٢ حبة بطاطس كبيرة",
+          "زيت زيتون",
+          "¾ كوب ندى زبادي يوناني",
+          "½ كوب جبنة شيدر، مبشورة",
+          "٢ م ك بصل أخضر، مفروم",
+          "¼ م ص ملح",
+          "¼ م ص فلفل أسود"
+        ],
+        "steps": [
+          "ادهني حبات البطاطس بزيت الزيتون، ثم غلفيها بورق الألمنيوم واخبزيها في فرن مسبق التسخين على حرارة ٢٠٠°م لمدة ٥٠–٦٠ دقيقة أو حتى تنضج.",
+          "افتحي كل حبة بطاطس من المنتصف، ثم اهرسي اللب قليلًا بالشوكة وتبليه بالملح والفلفل الأسود.",
+          "أضيفي جبنة الشيدر، الزبادي اليوناني، والذرة.",
+          "زيني بالبصل الأخضر وقدميها دافئة."
+        ]
+      }
+    }
+  }
+}

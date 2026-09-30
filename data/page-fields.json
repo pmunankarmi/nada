@@ -1,0 +1,314 @@
+{
+  "home_hero_nada": {
+    "page": "home",
+    "label": "NADA",
+    "default": "NADA",
+    "type": "text"
+  },
+  "home_hero_more_protein_healthy_lifestyle": {
+    "page": "home",
+    "label": "More Protein · Healthy Lifestyle",
+    "default": "More Protein · Healthy Lifestyle",
+    "type": "text"
+  },
+  "home_hero_greek_wins_everyday": {
+    "page": "home",
+    "label": "Greek Wins Everyday",
+    "default": "Greek Wins Everyday",
+    "type": "text"
+  },
+  "home_hero_see_the_wins_yourself": {
+    "page": "home",
+    "label": "See the Wins Yourself",
+    "default": "See the Wins Yourself",
+    "type": "text"
+  },
+  "home_hero_one_cup_many_possibilities": {
+    "page": "home",
+    "label": "One cup, many Possibilities",
+    "default": "One cup, many Possibilities",
+    "type": "text"
+  },
+  "home_reasons_why_greek_yogurt_wins": {
+    "page": "home",
+    "label": "Why Greek Yogurt Wins?",
+    "default": "Why Greek Yogurt Wins?",
+    "type": "text"
+  },
+  "home_reasons_you_ve_tried_yogurt": {
+    "page": "home",
+    "label": "You’ve tried yogurt.",
+    "default": "You’ve tried yogurt.",
+    "type": "text"
+  },
+  "home_reasons_you_haven_t_tried_this": {
+    "page": "home",
+    "label": "You haven’t tried this.",
+    "default": "You haven’t tried this.",
+    "type": "text"
+  },
+  "home_reasons_greek_yogurt_isn_t_just_a_thicker_version_": {
+    "page": "home",
+    "label": "Greek yogurt isn’t just a thicker version of what you know. It’s more prote",
+    "default": "Greek yogurt isn’t just a thicker version of what you know. It’s more protein, richer in flavour and a creamier texture than regular yogurt can match. Once you taste the difference, the choice makes itself.",
+    "type": "textarea"
+  },
+  "home_kitchen_nada_greek_wins_in_the_kitchen": {
+    "page": "home",
+    "label": "Nada Greek · Wins in the Kitchen",
+    "default": "Nada Greek · Wins in the Kitchen",
+    "type": "text"
+  },
+  "home_kitchen_your_secret_ingredient_wins": {
+    "page": "home",
+    "label": "Your Secret Ingredient Wins",
+    "default": "Your Secret Ingredient Wins",
+    "type": "text"
+  },
+  "home_recipes_endless_possibilities": {
+    "page": "home",
+    "label": "Endless Possibilities",
+    "default": "Endless Possibilities",
+    "type": "text"
+  },
+  "home_recipes_recipes_that_take_you_places_it_all_starts": {
+    "page": "home",
+    "label": "Recipes that Take you Places. It all starts with Greek.",
+    "default": "Recipes that Take you Places. It all starts with Greek.",
+    "type": "text"
+  },
+  "home_recipes_winning_recipes": {
+    "page": "home",
+    "label": "Winning Recipes →",
+    "default": "Winning Recipes →",
+    "type": "text"
+  },
+  "home_community_real_people": {
+    "page": "home",
+    "label": "Real People.",
+    "default": "Real People.",
+    "type": "text"
+  },
+  "home_community_real_recipes": {
+    "page": "home",
+    "label": "Real Recipes.",
+    "default": "Real Recipes.",
+    "type": "text"
+  },
+  "home_community_real_good": {
+    "page": "home",
+    "label": "Real Good.",
+    "default": "Real Good.",
+    "type": "text"
+  },
+  "home_community_share_your_recipe": {
+    "page": "home",
+    "label": "Share Your Recipe →",
+    "default": "Share Your Recipe →",
+    "type": "text"
+  },
+  "home_section_7_loved_by_you_made_with_nada_greek": {
+    "page": "home",
+    "label": "Loved by You. Made with Nada Greek.",
+    "default": "Loved by You. Made with Nada Greek.",
+    "type": "text"
+  },
+  "home_section_7_your_nada_greek_moments": {
+    "page": "home",
+    "label": "Your Nada Greek Moments.",
+    "default": "Your Nada Greek Moments.",
+    "type": "text"
+  },
+  "home_section_7_share_yours_using": {
+    "page": "home",
+    "label": "Share yours using ⁨#يوناني_ندى_يفوز⁩.",
+    "default": "Share yours using ⁨#يوناني_ندى_يفوز⁩.",
+    "type": "text"
+  },
+  "home_section_8_ready_to_go_greek_go_for_nada_greek_that_w": {
+    "page": "home",
+    "label": "Ready to Go Greek? Go for Nada Greek that Wins!",
+    "default": "Ready to Go Greek? Go for Nada Greek that Wins!",
+    "type": "text"
+  },
+  "home_section_8_go_for_the_win_go_for_nada_greek": {
+    "page": "home",
+    "label": "Go for the Win. Go for Nada Greek →",
+    "default": "Go for the Win. Go for Nada Greek →",
+    "type": "text"
+  },
+  "why_whytop_why_greek_yogurt_wins": {
+    "page": "why",
+    "label": "Why Greek Yogurt Wins?",
+    "default": "Why Greek Yogurt Wins?",
+    "type": "text"
+  },
+  "why_whytop_greek_yogurt_isn_t_just_a_thicker_version_": {
+    "page": "why",
+    "label": "Greek yogurt isn’t just a thicker version of what you know. It’s more prote",
+    "default": "Greek yogurt isn’t just a thicker version of what you know. It’s more protein, richer in flavour and a creamier texture than regular yogurt can match. Once you taste the difference, the choice makes itself.",
+    "type": "textarea"
+  },
+  "why_section_2_more_than_a_thicker_yogurt": {
+    "page": "why",
+    "label": "More Than a Thicker Yogurt.",
+    "default": "More Than a Thicker Yogurt.",
+    "type": "text"
+  },
+  "why_section_3_reasons_to_choose_greek_yogurt": {
+    "page": "why",
+    "label": "Reasons to Choose Greek Yogurt",
+    "default": "Reasons to Choose Greek Yogurt",
+    "type": "text"
+  },
+  "why_section_3_greek_yogurt_is_one_of_the_most_nourishing": {
+    "page": "why",
+    "label": "Greek yogurt is one of the most nourishing things you can eat — and we make",
+    "default": "Greek yogurt is one of the most nourishing things you can eat — and we make it the honest way. Here’s what’s in every pot.",
+    "type": "textarea"
+  },
+  "why_section_3_thicker_texture": {
+    "page": "why",
+    "label": "Thicker texture",
+    "default": "Thicker texture",
+    "type": "text"
+  },
+  "why_section_3_creamy_and_rich_with_a_texture_you_feel_fr": {
+    "page": "why",
+    "label": "Creamy and rich, with a texture you feel from the first spoon.",
+    "default": "Creamy and rich, with a texture you feel from the first spoon.",
+    "type": "text"
+  },
+  "why_section_3_higher_protein": {
+    "page": "why",
+    "label": "Higher protein",
+    "default": "Higher protein",
+    "type": "text"
+  },
+  "why_section_3_a_protein_rich_choice_that_adds_more_to_yo": {
+    "page": "why",
+    "label": "A protein-rich choice that adds more to your day.",
+    "default": "A protein-rich choice that adds more to your day.",
+    "type": "text"
+  },
+  "why_section_3_rich_creamy_taste": {
+    "page": "why",
+    "label": "Rich, creamy taste",
+    "default": "Rich, creamy taste",
+    "type": "text"
+  },
+  "why_section_3_an_appetising_taste_and_a_creaminess_you_n": {
+    "page": "why",
+    "label": "An appetising taste and a creaminess you notice in every spoon.",
+    "default": "An appetising taste and a creaminess you notice in every spoon.",
+    "type": "text"
+  },
+  "why_section_4_now_you_know_what_real_greek_yogurt_looks_": {
+    "page": "why",
+    "label": "Now you know what real Greek yogurt looks like.",
+    "default": "Now you know what real Greek yogurt looks like.",
+    "type": "text"
+  },
+  "why_section_4_meet_the_one_that_wins": {
+    "page": "why",
+    "label": "Meet the one that wins.",
+    "default": "Meet the one that wins.",
+    "type": "text"
+  },
+  "why_section_4_explore_our_range": {
+    "page": "why",
+    "label": "Explore our range →",
+    "default": "Explore our range →",
+    "type": "text"
+  },
+  "recipes_rbooktop_a_pot_of_nada_a_hundred_ways": {
+    "page": "recipes",
+    "label": "A pot of NADA, a hundred ways",
+    "default": "A pot of NADA, a hundred ways",
+    "type": "text"
+  },
+  "recipes_rbooktop_thick_greek_yogurt_is_the_most_useful_thin": {
+    "page": "recipes",
+    "label": "Thick Greek yogurt is the most useful thing in the fridge — breakfast, dip,",
+    "default": "Thick Greek yogurt is the most useful thing in the fridge — breakfast, dip, marinade, dessert. Search the collection or filter by moment.",
+    "type": "textarea"
+  },
+  "recipes_swaps_nada_greek_wins_in_the_kitchen": {
+    "page": "recipes",
+    "label": "Nada Greek · Wins in the Kitchen",
+    "default": "Nada Greek · Wins in the Kitchen",
+    "type": "text"
+  },
+  "recipes_swaps_your_secret_ingredient_wins": {
+    "page": "recipes",
+    "label": "Your Secret Ingredient Wins",
+    "default": "Your Secret Ingredient Wins",
+    "type": "text"
+  },
+  "recipes_swaps_once_you_start_cooking_with_nada_greek_yog": {
+    "page": "recipes",
+    "label": "Once you start cooking with Nada Greek Yogurt, you won’t go back.",
+    "default": "Once you start cooking with Nada Greek Yogurt, you won’t go back.",
+    "type": "text"
+  },
+  "recipes_swaps_go_greek_and_craft_recipes_regular_yogurt_": {
+    "page": "recipes",
+    "label": "Go Greek and craft recipes regular yogurt simply can’t compete with.",
+    "default": "Go Greek and craft recipes regular yogurt simply can’t compete with.",
+    "type": "text"
+  },
+  "recipes_swaps_one_cup_recipes_that_take_you_places_it_al": {
+    "page": "recipes",
+    "label": "One cup. Recipes that Take you Places. It all starts with Greek.",
+    "default": "One cup. Recipes that Take you Places. It all starts with Greek.",
+    "type": "text"
+  },
+  "recipes_section_4_every_recipe_begins_with_real_greek_yogurt": {
+    "page": "recipes",
+    "label": "Every recipe begins with real Greek yogurt",
+    "default": "Every recipe begins with real Greek yogurt",
+    "type": "text"
+  },
+  "recipes_section_4_explore_the_hub": {
+    "page": "recipes",
+    "label": "Explore the hub →",
+    "default": "Explore the hub →",
+    "type": "text"
+  },
+  "products_rangetop_the_full_range": {
+    "page": "products",
+    "label": "The Full Range.",
+    "default": "The Full Range.",
+    "type": "text"
+  },
+  "products_section_3_one_cup": {
+    "page": "products",
+    "label": "One Cup.",
+    "default": "One Cup.",
+    "type": "text"
+  },
+  "products_section_3_a_hundred_ways": {
+    "page": "products",
+    "label": "A Hundred Ways.",
+    "default": "A Hundred Ways.",
+    "type": "text"
+  },
+  "products_section_3_all_recipes": {
+    "page": "products",
+    "label": "All Recipes →",
+    "default": "All Recipes →",
+    "type": "text"
+  },
+  "share_sharetop_share_your_recipe": {
+    "page": "share",
+    "label": "Share Your Recipe",
+    "default": "Share Your Recipe",
+    "type": "text"
+  },
+  "share_sharetop_made_something_good_with_nada_greek_tell_u": {
+    "page": "share",
+    "label": "Made something good with Nada Greek? Tell us how you made it.",
+    "default": "Made something good with Nada Greek? Tell us how you made it.",
+    "type": "text"
+  }
+}

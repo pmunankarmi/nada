@@ -1,0 +1,163 @@
+{
+  "home_reasons_wgclaims": {
+    "page": "home",
+    "label": "Wgclaims",
+    "fields": {
+      "text_1": {
+        "label": "Text 1",
+        "type": "text"
+      }
+    },
+    "rows": [
+      {
+        "text_1": "2X the Protein"
+      },
+      {
+        "text_1": "Thicker, Richer, Satisfying in every Spoon."
+      },
+      {
+        "text_1": "Uplifts every Recipe"
+      }
+    ]
+  },
+  "home_kitchen_swapgrid": {
+    "page": "home",
+    "label": "Swapgrid",
+    "fields": {
+      "text_1": {
+        "label": "Heading",
+        "type": "text"
+      },
+      "text_2": {
+        "label": "Text 2",
+        "type": "text"
+      }
+    },
+    "rows": [
+      {
+        "text_1": "Butter & Oil",
+        "text_2": "Perfectly Fluffy. Scrumptiously Moist. Protein in every Bite."
+      },
+      {
+        "text_1": "Cream Cheese",
+        "text_2": "Nada Greek has the thick, creamy texture you’re after. Deliciousness served."
+      },
+      {
+        "text_1": "Sour Cream",
+        "text_2": "Nada Greek goes everywhere sour cream goes & does it better."
+      },
+      {
+        "text_1": "Mayonnaise",
+        "text_2": "Same for Nada Greek — creaminess with more protein and fewer additives."
+      },
+      {
+        "text_1": "Fresh Cream",
+        "text_2": "All the Richness. None of the Heaviness."
+      }
+    ]
+  },
+  "home_section_5_rtiles_grid": {
+    "page": "home",
+    "label": "Rtiles Grid",
+    "fields": {
+      "text_1": {
+        "label": "Heading",
+        "type": "text"
+      },
+      "text_2": {
+        "label": "Text 2",
+        "type": "text"
+      }
+    },
+    "rows": [
+      {
+        "text_1": "Dips & Sauces",
+        "text_2": "Scooping this, Dunking that Win."
+      },
+      {
+        "text_1": "Savoury Dishes",
+        "text_2": "Cook with a Winning Touch."
+      },
+      {
+        "text_1": "Desserts",
+        "text_2": "End on a Sweet Win."
+      },
+      {
+        "text_1": "Snacks",
+        "text_2": "Win Every Bite."
+      },
+      {
+        "text_1": "Breakfast",
+        "text_2": "Start with a Win."
+      },
+      {
+        "text_1": "Smoothies",
+        "text_2": "Blend Your Way to a Win."
+      }
+    ]
+  },
+  "why_section_2_vsec_row": {
+    "page": "why",
+    "label": "Vsec Row",
+    "fields": {
+      "text_1": {
+        "label": "Heading",
+        "type": "text"
+      },
+      "text_2": {
+        "label": "Text 2",
+        "type": "text"
+      }
+    },
+    "rows": [
+      {
+        "text_1": "Not Just for Athletes",
+        "text_2": "Not just for athletes, for anyone who wants to eat smarter."
+      },
+      {
+        "text_1": "Not Just for Breakfast",
+        "text_2": "Not just for breakfast, you can use it for dips, marinade, smoothies, desserts & even baking bread."
+      },
+      {
+        "text_1": "Not All Are the Same",
+        "text_2": "Not all Greek yogurts are the same, milk quality and real fruit make the difference."
+      }
+    ]
+  },
+  "recipes_swaps_swapgrid": {
+    "page": "recipes",
+    "label": "Swapgrid",
+    "fields": {
+      "text_1": {
+        "label": "Heading",
+        "type": "text"
+      },
+      "text_2": {
+        "label": "Text 2",
+        "type": "textarea"
+      }
+    },
+    "rows": [
+      {
+        "text_1": "Butter & Oil",
+        "text_2": "Swap Nada Greek into your baking, muffins, banana bread, pancakes, cookies and more. Perfectly Fluffy. Scrumptiously Moist. Protein in every Bite."
+      },
+      {
+        "text_1": "Cream Cheese",
+        "text_2": "For dips, spreads & even frostings. Nada Greek has the thick, creamy texture you’re after. Deliciousness served."
+      },
+      {
+        "text_1": "Sour Cream",
+        "text_2": "Coleslaw, baked potato topping, guacamole, spinach dip, you name it. Nada Greek goes everywhere sour cream goes & does it better."
+      },
+      {
+        "text_1": "Mayonnaise",
+        "text_2": "Cause it works with everything. Same for Nada Greek — creaminess with more protein and fewer additives."
+      },
+      {
+        "text_1": "Fresh Cream",
+        "text_2": "Stir Nada Greek into sauces, soups & marinades as a lighter alternative to heavy cream. All the Richness. None of the Heaviness."
+      }
+    ]
+  }
+}

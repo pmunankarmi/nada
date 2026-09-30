@@ -1,0 +1,43 @@
+/* WordPress integration for the original NADAfinal3.3.8 artwork and layouts. */
+.reveal { opacity: 1; transform: none; visibility: visible; }
+.nada-menu { display: flex; align-items: center; gap: 1.6rem; margin: 0; padding: 0; list-style: none; }
+.nada-menu .sub-menu { display: none; position: absolute; padding: 1rem; background: white; list-style: none; }
+.nada-menu li:hover > .sub-menu, .nada-menu li:focus-within > .sub-menu { display: block; }
+.custom-logo { width: auto; max-width: 150px; max-height: 72px; object-fit: contain; }
+.nada-languages { display: flex; gap: .75rem; }
+.nada-languages a { white-space: nowrap; }
+.nada-languages [aria-current] { font-weight: 800; text-decoration: underline; }
+.nada-content { max-width: 1120px; margin: auto; padding: 150px 24px 80px; min-height: 65vh; }
+.nada-content h1 { font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 2rem; }
+.nada-content h2 { font-size: 1.7rem; margin-block: 1.5rem; }
+.nada-content p, .nada-content li { line-height: 1.8; }
+.nada-content img { max-width: 100%; height: auto; }
+.nada-detail-image { width: 100%; max-height: 650px; object-fit: contain; }
+.nada-product-image { max-height: 500px; width: auto; display: block; margin-inline: auto; }
+.nada-recipe-columns { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; }
+.nada-recipe-columns ul, .nada-recipe-columns ol { padding-inline-start: 1.5rem; }
+.nada-recipe-times { display: flex; flex-wrap: wrap; gap: 2rem; padding-block: 2rem; }
+.nada-recipe-times dt { font-weight: 700; }
+.nada-recipe-card { border-radius: 20px; overflow: hidden; background: #fff; box-shadow: 0 8px 30px #0b386214; }
+.nada-recipe-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.nada-card-copy { padding: 1.5rem; }
+.nada-card-copy h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+.nada-search { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin: 1rem 0 2rem; }
+.nada-search input { border: 1px solid #ddd; border-radius: 8px; padding: .8rem; }
+.nav-links { display: flex; gap: 1rem; margin-block: 2rem; }
+.foot__social { flex-wrap: wrap; }
+.nada-honeypot { position: absolute; left: -9999px; }
+.nada-message { padding: 1rem; background: #eff6e3; margin-bottom: 1rem; }
+.admin-bar .nav { top: 32px; }
+[dir="rtl"] body { font-family: Cairo, sans-serif; }
+[dir="rtl"] .nada-content { text-align: right; }
+[dir="rtl"] .nada-card-copy { text-align: right; }
+body.nada-menu-open { overflow: hidden; }
+.drawer.is-open { visibility: visible; opacity: 1; transform: none; pointer-events: auto; }
+@media (max-width: 900px) {
+    .nada-header-cta { display: none; }
+    .drawer .nada-menu { display: flex; flex-direction: column; align-items: flex-start; }
+    .nada-recipe-columns { grid-template-columns: 1fr; gap: 1rem; }
+}
+@media (max-width: 782px) { .admin-bar .nav { top: 46px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }

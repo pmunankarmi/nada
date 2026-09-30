@@ -1,0 +1,106 @@
+[
+  {
+    "id": "plain-full",
+    "title": "Plain",
+    "summary": "Full Fat · 11g Protein · 160g / 360g",
+    "fat": "full",
+    "image": "assets/img/products/en/plain-full.png",
+    "imageAr": "assets/img/products/ar/plain-full.png"
+  },
+  {
+    "id": "plain-low",
+    "title": "Plain Low Fat",
+    "summary": "Low Fat · 11g Protein · 160g / 360g",
+    "fat": "low",
+    "image": "assets/img/products/en/plain-low.png",
+    "imageAr": "assets/img/products/ar/plain-low.png"
+  },
+  {
+    "id": "plain-zero",
+    "title": "Plain 0% Fat",
+    "summary": "0% Fat · 16g Protein · No Added Sugar · 160g / 360g",
+    "fat": "zero",
+    "image": "assets/img/products/en/plain-zero.png",
+    "imageAr": "assets/img/products/ar/plain-zero.png"
+  },
+  {
+    "id": "strawberry-full",
+    "title": "Strawberry Full Fat",
+    "summary": "Full Fat · Real Fruit Pieces · 11g Protein · 160g",
+    "fat": "full",
+    "image": "assets/img/products/en/strawberry-full.png",
+    "imageAr": "assets/img/products/ar/strawberry-full.png"
+  },
+  {
+    "id": "strawberry-low",
+    "title": "Strawberry Low Fat",
+    "summary": "Low Fat · Real Fruit Pieces · 10g Protein · 160g",
+    "fat": "low",
+    "image": "assets/img/products/en/strawberry-low.png",
+    "imageAr": "assets/img/products/ar/strawberry-low.png"
+  },
+  {
+    "id": "blueberry-fullcream",
+    "title": "Blueberry Full Fat",
+    "summary": "Full Fat · Real Fruit Pieces · 11g Protein · 160g",
+    "fat": "full",
+    "image": "assets/img/products/en/blueberry-fullcream.png",
+    "imageAr": "assets/img/products/ar/blueberry-fullcream.png"
+  },
+  {
+    "id": "blueberry-low",
+    "title": "Blueberry Low Fat",
+    "summary": "Low Fat · Real Fruit Pieces · 11g Protein · 160g",
+    "fat": "low",
+    "image": "assets/img/products/en/blueberry-low.png",
+    "imageAr": "assets/img/products/ar/blueberry-low.png"
+  },
+  {
+    "id": "mixedberries-full",
+    "title": "Mixed Berries Full Fat",
+    "summary": "Full Fat · Real Fruit Pieces · 11g Protein · 160g",
+    "fat": "full",
+    "image": "assets/img/products/en/mixedberries-full.png",
+    "imageAr": "assets/img/products/ar/mixedberries-full.png"
+  },
+  {
+    "id": "mixedberry",
+    "title": "Mixed Berry 0% Fat",
+    "summary": "0% Fat · Real Fruit Pieces · 16g Protein · 160g",
+    "fat": "zero",
+    "image": "assets/img/products/en/mixedberry.png",
+    "imageAr": "assets/img/products/ar/mixedberry.png"
+  },
+  {
+    "id": "blackberry-rasp",
+    "title": "Blackberry & Raspberry",
+    "summary": "Full Fat · Real Fruit Pieces · 11g Protein · 160g",
+    "fat": "full",
+    "image": "assets/img/products/en/blackberry-rasp.png",
+    "imageAr": "assets/img/products/ar/blackberry-rasp.png"
+  },
+  {
+    "id": "mango",
+    "title": "Mango & Peach 0% Fat",
+    "summary": "0% Fat · Real Fruit Pieces · 16g Protein · 160g",
+    "fat": "zero",
+    "image": "assets/img/products/en/mango.png",
+    "imageAr": "assets/img/products/ar/mango.png"
+  },
+  {
+    "id": "honey",
+    "title": "Natural Honey",
+    "summary": "Full Fat · 11g Protein · 160g",
+    "fat": "full",
+    "image": "assets/img/products/en/honey.png",
+    "imageAr": "assets/img/products/ar/honey.png"
+  },
+  {
+    "id": "lemon-mint",
+    "title": "Lemon & Mint",
+    "summary": "Full Fat · Real Fruit Pieces · 11g Protein · 160g",
+    "fat": "full",
+    "image": "assets/img/products/en/lemon-mint.png",
+    "imageAr": "assets/img/products/ar/lemon-mint.png"
+  }
+]
