@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
    <?php foreach ( nada_rows( 'why_section_2_vsec_row' ) as $row_index => $row ) : ?>
    <li class="whypoint whypoint--photo reveal">
     <span class="whypoint__shot">
-     <img alt="" decoding="async" loading="lazy" src="<?php echo esc_url( nada_asset( array( 'assets/img/stats/stat-everyone.jpg', 'assets/img/stats/stat-versatile.jpg', 'assets/img/stats/stat-quality.jpg' )[ $row_index % 3 ] ) ); ?>"/>
+     <?php echo wp_get_attachment_image( absint( $row['image'] ?? 0 ), 'full', false, array( 'loading' => 'lazy' ) ); ?>
     </span>
     <h3 class="whypoint__title">
      <?php echo esc_html( $row['text_1'] ?? '' ); ?>

@@ -30,12 +30,12 @@ defined( 'ABSPATH' ) || exit;
   </div>
   <div class="wgproof">
    <div class="wgproof__art reveal">
-    <img alt="A pot of NADA 0% fat Greek yogurt with 16g of protein" decoding="async" loading="lazy" src="<?php echo esc_url( nada_asset( 'assets/img/stage-cup-v3.webp' ) ); ?>"/>
+    <?php echo wp_get_attachment_image( absint( nada_field( 'home_reasons_image' ) ), 'full', false, array( 'loading' => 'lazy' ) ); ?>
    </div>
    <ul class="wgclaims">
     <?php foreach ( nada_rows( 'home_reasons_wgclaims' ) as $row_index => $row ) : ?>
     <li class="wgclaim reveal">
-     <img alt="" aria-hidden="true" class="wgclaim__badge" decoding="async" loading="lazy" src="<?php echo esc_url( nada_asset( array( 'assets/img/why/badge-protein-t.png', 'assets/img/why/badge-thick-t.png', 'assets/img/why/badge-recipes-t.png' )[ $row_index % 3 ] ) ); ?>"/>
+     <?php echo wp_get_attachment_image( absint( $row['image'] ?? 0 ), 'full', false, array( 'loading' => 'lazy', 'class' => 'wgclaim__badge', 'alt' => '' ) ); ?>
      <p class="wgclaim__t">
       <?php echo esc_html( $row['text_1'] ?? '' ); ?>
      </p>

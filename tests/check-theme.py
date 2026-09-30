@@ -28,7 +28,7 @@ for recipe in library['KORA']['RECIPES']:
     for key in ['image', 'imageAr']:
         assert recipe.get(key, recipe['image']) in media, f'Missing recipe upload manifest: {recipe.get(key)}'
 assert len(json.loads((root / 'data/products.json').read_text())) == 13
-assert not re.search(r"'type'\s*=>\s*'(image|wysiwyg|gallery)'", (root / 'inc/fields.php').read_text())
+assert not re.search(r"'type'\s*=>\s*'(wysiwyg|gallery)'", (root / 'inc/fields.php').read_text())
 print(f'Passed: {len(php_files)} PHP headers, template references, 19 bilingual recipes, 13 products, text-only fields.')
 
 for asset in media:

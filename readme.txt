@@ -6,8 +6,8 @@ After activation:
 - Configure English and Arabic in Polylang with language directories.
 - Select non-Plain permalinks.
 - Use Appearance > NADA Setup to import bilingual starter content.
-- Use Appearance > Theme Options for global content.
-- Use Customize > Site Identity for the native site logo. Theme Options links there.
+- Use Theme Options in the main admin menu for global content.
+- Use Customize > Site Identity for the native site logo. The logo field in Theme Options stays in sync with it.
 - Use Featured Image on recipes, products, the homepage and Content Images.
 
 Source, instructions and updates: https://github.com/pmunankarmi/nada

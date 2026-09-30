@@ -19,8 +19,6 @@ defined( 'ABSPATH' ) || exit;
      </span>
      <?php if ( has_post_thumbnail() ) : ?>
 <?php the_post_thumbnail( 'full', array( 'class' => 'herobowl', 'fetchpriority' => 'high' ) ); ?>
-<?php else : ?>
-<img alt="Overhead view of a plate of labneh with olive oil and za’atar, avocado toast, cherry tomatoes, cucumber and radish, beside an open pot of NADA Plain Greek Yogurt with a spoon in it" class="herobowl" decoding="async" fetchpriority="high" loading="eager" src="<?php echo esc_url( nada_asset( 'assets/img/cutouts/hero-plate-pack-en-v2.webp' ) ); ?>"/>
 <?php endif; ?>
     </div>
     <div class="hbanner__copy">
@@ -31,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
       <?php echo esc_html( nada_copy( 'home_hero_greek_wins_everyday' ) ); ?>
      </h1>
      <div class="hbanner__cta">
-      <a class="btn btn--solid btn--lg" href="#kitchen">
+      <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_copy( 'home_hero_link_1' ) ); ?>">
        <?php echo esc_html( nada_copy( 'home_hero_see_the_wins_yourself' ) ); ?>
       </a>
      </div>

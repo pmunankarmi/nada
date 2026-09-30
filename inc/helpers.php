@@ -27,8 +27,10 @@ function nada_translate( $text, $language = '' ) {
 }
 
 function nada_text( $text ) {
-	$translated = function_exists( 'pll__' ) ? pll__( $text ) : $text;
-	return $translated !== $text ? $translated : nada_translate( $text );
+	foreach ( (array) nada_option( 'ui_labels', array() ) as $row ) {
+		if ( ( $row['key'] ?? '' ) === $text ) { return $row[ 'ui_' . nada_language() ] ?? ''; }
+	}
+	return '';
 }
 
 function nada_field( $name, $default = '', $post_id = 0 ) {
@@ -50,9 +52,9 @@ function nada_field( $name, $default = '', $post_id = 0 ) {
 function nada_copy( $name ) {
 	$defaults = nada_data( 'page-fields' );
 	if ( in_array( $defaults[ $name ]['page'] ?? '', array( 'recipes', 'products' ), true ) ) {
-		return nada_option( $name . '_' . nada_language(), nada_translate( $defaults[ $name ]['default'] ?? '' ) );
+		return nada_option( $name . '_' . nada_language(), '' );
 	}
-	return nada_field( $name, nada_translate( $defaults[ $name ]['default'] ?? '' ) );
+	return nada_field( $name, '' );
 }
 
 function nada_rows( $name ) {
@@ -67,13 +69,7 @@ function nada_rows( $name ) {
 	if ( ( $archive && false !== get_option( 'options_' . $field_name, false ) ) || ( ! $archive && metadata_exists( 'post', get_the_ID(), $name ) ) ) {
 		return array();
 	}
-	$rows = $defaults[ $name ]['rows'] ?? array();
-	foreach ( $rows as &$row ) {
-		foreach ( $row as &$value ) {
-			$value = nada_translate( $value );
-		}
-	}
-	return $rows;
+	return array();
 }
 
 function nada_url( $target ) {
@@ -108,11 +104,9 @@ function nada_asset( $path ) {
 
 function nada_option( $name, $default = '' ) {
 	$value = function_exists( 'get_field' ) ? get_field( $name, 'option' ) : null;
-	return null === $value || false === $value || '' === $value ? $default : $value;
+	return false === get_option( 'options_' . $name, false ) ? $default : $value;
 }
 
 function nada_default_menu() {
-	foreach ( array( 'why-greek.html' => 'Why Greek', 'recipes.html' => 'Recipes', 'products.html' => 'Products' ) as $target => $label ) {
-		printf( '<a href="%s">%s</a>', esc_url( nada_url( $target ) ), esc_html( nada_text( $label ) ) );
-	}
+	wp_page_menu( array( 'show_home' => true ) );
 }

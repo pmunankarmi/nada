@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
     </span>
    </h2>
    <div class="hbanner__cta reveal">
-    <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_url( 'share-recipe.html' ) ); ?>">
+    <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_copy( 'home_community_link_1' ) ); ?>">
      <?php echo esc_html( nada_copy( 'home_community_share_your_recipe' ) ); ?>
     </a>
    </div>

@@ -1,0 +1,30 @@
+{
+  "recipes_section_4_link_1": {
+    "page": "recipes",
+    "target": "index.html#about"
+  },
+  "home_community_link_1": {
+    "page": "home",
+    "target": "share-recipe.html"
+  },
+  "home_recipes_link_1": {
+    "page": "home",
+    "target": "recipes.html"
+  },
+  "home_hero_link_1": {
+    "page": "home",
+    "target": "#kitchen"
+  },
+  "why_section_4_link_1": {
+    "page": "why",
+    "target": "products.html"
+  },
+  "home_section_8_link_1": {
+    "page": "home",
+    "target": "products.html"
+  },
+  "products_section_3_link_1": {
+    "page": "products",
+    "target": "recipes.html"
+  }
+}

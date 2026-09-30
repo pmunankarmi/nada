@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
    <?php foreach ( nada_rows( 'recipes_swaps_swapgrid' ) as $row_index => $row ) : ?>
    <article class="swaptile reveal">
     <div class="swaptile__img">
-     <img alt="" decoding="async" loading="lazy" src="<?php echo esc_url( nada_asset( array( 'assets/img/swaps/swap-butter.jpg', 'assets/img/swaps/swap-cheese.jpg', 'assets/img/swaps/swap-sour.jpg', 'assets/img/swaps/swap-mayo.jpg', 'assets/img/swaps/swap-cream.jpg' )[ $row_index % 5 ] ) ); ?>"/>
+     <?php echo wp_get_attachment_image( absint( $row['image'] ?? 0 ), 'full', false, array( 'loading' => 'lazy' ) ); ?>
     </div>
     <div class="swaptile__txt">
      <p aria-hidden="true" class="swaptile__mark">

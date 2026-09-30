@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
     <?php echo esc_html( nada_copy( 'home_recipes_recipes_that_take_you_places_it_all_starts' ) ); ?>
    </p>
    <div class="hbanner__cta reveal">
-    <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_url( 'recipes.html' ) ); ?>">
+    <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_copy( 'home_recipes_link_1' ) ); ?>">
      <?php echo esc_html( nada_copy( 'home_recipes_winning_recipes' ) ); ?>
     </a>
    </div>

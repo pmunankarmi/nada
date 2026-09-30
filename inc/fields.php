@@ -36,8 +36,19 @@ add_action( 'acf/init', function () {
 				$sub['name'] = $key;
 				$sub_fields[] = $sub;
 			}
+			if ( isset( nada_data( 'repeater-images' )[ $name ] ) ) {
+				$sub_fields[] = array( 'key' => 'field_nada_' . $name . '_image', 'name' => 'image', 'label' => 'home_reasons_wgclaims' === $name ? 'Icon' : 'Image', 'type' => 'image', 'return_format' => 'id', 'preview_size' => 'thumbnail', 'library' => 'all' );
+			}
+			if ( 'home_section_5_rtiles_grid' === $name ) {
+				$sub_fields[] = nada_acf_text( $name . '_url', 'Category URL' );
+				$sub_fields[ array_key_last( $sub_fields ) ]['name'] = 'url';
+			}
 			$fields[] = array( 'key' => 'field_nada_' . $name, 'name' => $name, 'label' => $definition['label'], 'type' => 'repeater', 'layout' => 'block', 'button_label' => 'Add item', 'sub_fields' => $sub_fields );
 		}
+		if ( 'home' === $page ) {
+			$fields[] = array( 'key' => 'field_nada_home_reasons_image', 'name' => 'home_reasons_image', 'label' => 'Why Greek product image', 'type' => 'image', 'return_format' => 'id', 'preview_size' => 'medium' );
+		}
+
 		if ( 'home' === $page ) {
 			$sections = array(
 				'home_hero' => 'Hero',

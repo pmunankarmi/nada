@@ -310,5 +310,47 @@
     "label": "Made something good with Nada Greek? Tell us how you made it.",
     "default": "Made something good with Nada Greek? Tell us how you made it.",
     "type": "text"
+  },
+  "recipes_section_4_link_1": {
+    "page": "recipes",
+    "label": "Button URL",
+    "type": "text",
+    "default": ""
+  },
+  "home_community_link_1": {
+    "page": "home",
+    "label": "Button URL",
+    "type": "text",
+    "default": ""
+  },
+  "home_recipes_link_1": {
+    "page": "home",
+    "label": "Button URL",
+    "type": "text",
+    "default": ""
+  },
+  "home_hero_link_1": {
+    "page": "home",
+    "label": "Button URL",
+    "type": "text",
+    "default": ""
+  },
+  "why_section_4_link_1": {
+    "page": "why",
+    "label": "Button URL",
+    "type": "text",
+    "default": ""
+  },
+  "home_section_8_link_1": {
+    "page": "home",
+    "label": "Button URL",
+    "type": "text",
+    "default": ""
+  },
+  "products_section_3_link_1": {
+    "page": "products",
+    "label": "Button URL",
+    "type": "text",
+    "default": ""
   }
 }

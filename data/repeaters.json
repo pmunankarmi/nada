@@ -1,7 +1,7 @@
 {
   "home_reasons_wgclaims": {
     "page": "home",
-    "label": "Wgclaims",
+    "label": "Why Greek claims",
     "fields": {
       "text_1": {
         "label": "Text 1",
@@ -22,7 +22,7 @@
   },
   "home_kitchen_swapgrid": {
     "page": "home",
-    "label": "Swapgrid",
+    "label": "Kitchen swaps",
     "fields": {
       "text_1": {
         "label": "Heading",
@@ -58,7 +58,7 @@
   },
   "home_section_5_rtiles_grid": {
     "page": "home",
-    "label": "Rtiles Grid",
+    "label": "Recipe categories",
     "fields": {
       "text_1": {
         "label": "Heading",
@@ -158,6 +158,19 @@
         "text_1": "Fresh Cream",
         "text_2": "Stir Nada Greek into sauces, soups & marinades as a lighter alternative to heavy cream. All the Richness. None of the Heaviness."
       }
+    ]
+  },
+  "home_section_7_gallery": {
+    "page": "home",
+    "label": "Community images",
+    "fields": {},
+    "rows": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
     ]
   }
 }

@@ -54,35 +54,26 @@ add_action( 'load-update-core.php', function () {
 	}
 } );
 
-add_action( 'admin_menu', function () {
-	add_theme_page( 'NADA Updates', 'NADA Updates', 'update_themes', 'nada-updates', 'nada_updates_screen' );
-} );
-
-/** Allow administrators to diagnose host connectivity without exposing credentials. */
-function nada_updates_screen() {
-	if ( ! current_user_can( 'update_themes' ) ) { return; }
-	$message = '';
-	if ( isset( $_POST['nada_updates_nonce'] ) ) {
-		check_admin_referer( 'nada_updates', 'nada_updates_nonce' );
-		delete_transient( 'nada_github_release' );
-		$response = wp_remote_get( 'https://api.github.com/repos/pmunankarmi/nada/releases/latest', array( 'timeout' => 15, 'headers' => array( 'Accept' => 'application/vnd.github+json', 'User-Agent' => 'NADA-WordPress-Theme' ) ) );
-		if ( is_wp_error( $response ) ) {
-			$message = $response->get_error_message();
-		} else {
-			$body = json_decode( wp_remote_retrieve_body( $response ), true );
-			$message = 'GitHub HTTP ' . wp_remote_retrieve_response_code( $response ) . ': ' . ( $body['tag_name'] ?? $body['message'] ?? 'No release metadata returned.' );
-		}
-		delete_site_transient( 'update_themes' );
-		wp_update_themes();
-	}
-	?>
-	<div class="wrap">
-		<h1>NADA Updates</h1>
-		<p>Installed version: <?php echo esc_html( wp_get_theme( get_template() )->get( 'Version' ) ); ?></p>
-		<?php if ( $message ) : ?><div class="notice notice-info"><p><?php echo esc_html( $message ); ?></p></div><?php endif; ?>
-		<p>Each push to the repository's main branch publishes a versioned theme release. WordPress checks for updates automatically. Use this check to refresh release metadata and test GitHub connectivity.</p>
-		<form method="post"><?php wp_nonce_field( 'nada_updates', 'nada_updates_nonce' ); submit_button( 'Check GitHub connection and updates' ); ?></form>
-		<p><a href="<?php echo esc_url( admin_url( 'update-core.php' ) ); ?>">Open WordPress Updates</a></p>
-	</div>
-	<?php
+/** Refresh native update notices hourly without a separate settings screen. */
+function nada_refresh_theme_updates() {
+	if ( get_transient( 'nada_update_check_recent' ) ) { return; }
+	set_transient( 'nada_update_check_recent', 1, HOUR_IN_SECONDS );
+	delete_transient( 'nada_github_release' );
+	delete_site_transient( 'update_themes' );
+	wp_update_themes();
 }
+add_action( 'nada_hourly_theme_updates', 'nada_refresh_theme_updates' );
+add_action( 'init', function () {
+	if ( ! wp_next_scheduled( 'nada_hourly_theme_updates' ) ) {
+		wp_schedule_event( time() + HOUR_IN_SECONDS, 'hourly', 'nada_hourly_theme_updates' );
+	}
+} );
+add_action( 'admin_init', function () {
+	if ( current_user_can( 'update_themes' ) ) {
+		nada_refresh_theme_updates();
+	}
+} );
+add_action( 'switch_theme', function () {
+	wp_clear_scheduled_hook( 'nada_hourly_theme_updates' );
+	delete_transient( 'nada_update_check_recent' );
+} );

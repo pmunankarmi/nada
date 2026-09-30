@@ -119,7 +119,7 @@ function nada_import_content() {
 				}
 				$page_key = array( 'home' => 'home', 'why-greek' => 'why', 'share-recipe' => 'share' )[ $slug ];
 				foreach ( nada_data( 'page-fields' ) as $name => $field ) {
-					if ( $page_key === $field['page'] ) {
+					if ( $page_key === $field['page'] && ! isset( nada_data( 'content-links' )[ $name ] ) ) {
 						nada_seed_field( $name, nada_translate( $field['default'], $language ), $id );
 					}
 				}
@@ -196,6 +196,7 @@ function nada_import_content() {
 			), 'option' );
 			update_option( 'nada_setup_complete', 1 );
 		}
+		nada_seed_editor_content();
 		flush_rewrite_rules();
 	} finally {
 		delete_option( 'nada_import_lock' );

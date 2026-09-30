@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
     <?php echo esc_html( nada_copy( 'why_section_4_meet_the_one_that_wins' ) ); ?>
    </h2>
    <div class="hbanner__cta reveal">
-    <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_url( 'products.html' ) ); ?>">
+    <a class="btn btn--solid btn--lg" href="<?php echo esc_url( nada_copy( 'why_section_4_link_1' ) ); ?>">
      <?php echo esc_html( nada_copy( 'why_section_4_explore_our_range' ) ); ?>
     </a>
    </div>

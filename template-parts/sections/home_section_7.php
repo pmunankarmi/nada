@@ -15,24 +15,11 @@ defined( 'ABSPATH' ) || exit;
   <?php echo esc_html( nada_copy( 'home_section_7_your_nada_greek_moments' ) ); ?>
  </p>
  <div class="community__grid">
+  <?php foreach ( nada_rows( 'home_section_7_gallery' ) as $row ) : ?>
   <figure class="upost reveal">
-   <img alt="A spoonful of NADA plain Greek yogurt lifted from the pot beside a bowl of yogurt" loading="lazy" src="<?php echo esc_url( nada_asset( 'assets/img/social/social-plain-pack-v2.jpg' ) ); ?>"/>
+   <?php echo wp_get_attachment_image( absint( $row['image'] ?? 0 ), 'full', false, array( 'loading' => 'lazy' ) ); ?>
   </figure>
-  <figure class="upost reveal">
-   <img alt="A pot of NADA strawberry Greek yogurt beside a bowl of yogurt topped with fresh strawberries" loading="lazy" src="<?php echo esc_url( nada_asset( 'assets/img/social/social-strawberry-v2.jpg' ) ); ?>"/>
-  </figure>
-  <figure class="upost reveal">
-   <img alt="Nada Greek Yogurt with honey, almonds and seeds" loading="lazy" src="<?php echo esc_url( nada_asset( 'assets/img/social/social-honey.jpg' ) ); ?>"/>
-  </figure>
-  <figure class="upost reveal">
-   <img alt="A pot of NADA mixed berries 0% fat Greek yogurt beside a bowl of yogurt topped with blueberries, raspberries and blackberries" loading="lazy" src="<?php echo esc_url( nada_asset( 'assets/img/social/social-mixedberry-v2.jpg' ) ); ?>"/>
-  </figure>
-  <figure class="upost reveal">
-   <img alt="Nada Mango and Peach Greek Yogurt bowl" loading="lazy" src="<?php echo esc_url( nada_asset( 'assets/img/social/social-mango.jpg' ) ); ?>"/>
-  </figure>
-  <figure class="upost reveal">
-   <img alt="Granola and berries added to a pot of Nada Greek Yogurt" loading="lazy" src="<?php echo esc_url( nada_asset( 'assets/img/social/social-granola.jpg' ) ); ?>"/>
-  </figure>
+  <?php endforeach; ?>
  </div>
  <p class="community__ugccta reveal">
   <?php echo esc_html( nada_copy( 'home_section_7_share_yours_using' ) ); ?>

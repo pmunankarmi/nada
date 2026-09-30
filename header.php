@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 			<?php if ( has_custom_logo() ) : ?>
 				<?php the_custom_logo(); ?>
 			<?php else : ?>
-				<a href="<?php echo esc_url( nada_url( 'index.html' ) ); ?>"><img class="brand__logo" src="<?php echo esc_url( nada_asset( 'assets/img/nada-mark.png' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 			<?php endif; ?>
 		</div>
 		<nav class="nav__links" aria-label="<?php echo esc_attr( nada_text( 'Primary' ) ); ?>">

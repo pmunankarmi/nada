@@ -1,0 +1,42 @@
+{
+  "home_reasons_wgclaims": [
+    "assets/img/why/badge-protein-t.png",
+    "assets/img/why/badge-thick-t.png",
+    "assets/img/why/badge-recipes-t.png"
+  ],
+  "home_kitchen_swapgrid": [
+    "assets/img/swaps/swap-butter.jpg",
+    "assets/img/swaps/swap-cheese.jpg",
+    "assets/img/swaps/swap-sour.jpg",
+    "assets/img/swaps/swap-mayo.jpg",
+    "assets/img/swaps/swap-cream.jpg"
+  ],
+  "home_section_5_rtiles_grid": [
+    "assets/img/recipes/recipe-dips.jpg",
+    "assets/img/recipes/recipe-savoury.jpg",
+    "assets/img/recipes/recipe-desserts.jpg",
+    "assets/img/recipes/recipe-snacks.jpg",
+    "assets/img/recipes/recipe-breakfast.jpg",
+    "assets/img/recipes/recipe-smoothies.jpg"
+  ],
+  "why_section_2_vsec_row": [
+    "assets/img/stats/stat-everyone.jpg",
+    "assets/img/stats/stat-versatile.jpg",
+    "assets/img/stats/stat-quality.jpg"
+  ],
+  "recipes_swaps_swapgrid": [
+    "assets/img/swaps/swap-butter.jpg",
+    "assets/img/swaps/swap-cheese.jpg",
+    "assets/img/swaps/swap-sour.jpg",
+    "assets/img/swaps/swap-mayo.jpg",
+    "assets/img/swaps/swap-cream.jpg"
+  ],
+  "home_section_7_gallery": [
+    "assets/img/social/social-plain-pack-v2.jpg",
+    "assets/img/social/social-strawberry-v2.jpg",
+    "assets/img/social/social-honey.jpg",
+    "assets/img/social/social-mixedberry-v2.jpg",
+    "assets/img/social/social-mango.jpg",
+    "assets/img/social/social-granola.jpg"
+  ]
+}
