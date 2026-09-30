@@ -20,7 +20,7 @@ $status = sanitize_key( wp_unslash( $_GET['recipe-status'] ?? '' ) );
 		<input type="hidden" name="language" value="<?php echo esc_attr( nada_language() ); ?>">
 		<input type="hidden" name="return_id" value="<?php echo esc_attr( get_the_ID() ); ?>">
 		<div class="nada-honeypot" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-		<div class="sfield"><label for="recipe-name"><?php echo esc_html( nada_text( 'Recipe name' ) ); ?></label><input id="recipe-name" name="recipe" required maxlength="120"></div>
+		<div class="sfield"><label for="recipe-name"><?php echo esc_html( nada_text( 'Recipe name' ) ); ?></label><input type="text" id="recipe-name" name="recipe" required maxlength="120"></div>
 		<div class="sfield"><label for="recipe-category"><?php echo esc_html( nada_text( 'Category' ) ); ?></label>
 			<select id="recipe-category" name="category" required>
 				<?php $terms = get_terms( array( 'taxonomy' => 'recipe_category', 'hide_empty' => false ) ); ?>

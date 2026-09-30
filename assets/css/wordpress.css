@@ -47,13 +47,6 @@ body.nada-menu-open { overflow: hidden; }
 .brand .brand__logo { max-height: none; max-width: none; }
 .nav__links .nada-menu { gap: 38px; }
 .nav__links .menu-item { position: static; }
-.nav__links .menu-item-has-children > a::before { content: ''; display: inline-block; width: 5px; height: 5px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg); margin-inline-end: 9px; vertical-align: 3px; }
-.nav__links .sub-menu { display: none; position: absolute; inset-inline: 0; top: 100%; margin: 0; padding: 24px max(5vw, calc((100vw - 1120px) / 2)); background: var(--paper, #fff); grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; box-shadow: 0 20px 30px #0b386220; }
-.nav__links li:hover > .sub-menu, .nav__links li:focus-within > .sub-menu { display: grid; }
-.nav__links .sub-menu a { display: block; }
-.nav__links .sub-menu a::after { display: none; }
-.nav__links .sub-menu img { width: 100%; height: 105px; object-fit: cover; border-radius: 12px; margin-bottom: 10px; }
-.nav__links .sub-menu b { display: block; font-size: .8rem; }
 .foot__links .nada-menu { flex-direction: column; align-items: flex-start; gap: 12px; }
 .foot__links .nada-menu li { margin: 0; padding: 0; }
 .foot__brandlogo img { width: auto; max-height: none; max-width: none; }
@@ -65,6 +58,41 @@ body.nada-menu-open { overflow: hidden; }
     .nav__links .nada-menu { gap: 16px; }
     .drawer .nada-menu { gap: 12px; }
 }
-.nav__links .menu-item-has-children > a { display: inline-flex; align-items: center; gap: 8px; }
-.nav__links .menu-item-has-children > a::before { order: 1; margin: 0; }
 .foot__links .nada-menu { gap: 0; }
+
+/* Original four-column mega panel, with WordPress list semantics. */
+.nav__links .nada-mega-list {
+    position: static;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    list-style: none;
+}
+.nav__links .nada-mega-list > li { min-width: 0; }
+.nav__links .nada-mega-list .megacard { display: flex; }
+.nav__links .navdd__panel { top: 100%; position: absolute; }
+.nav__links .navdd__panel .mega__title { display: block; }
+
+/* Keep all submission controls consistent with the original rounded fields. */
+.shareform .sfield select {
+    width: 100%;
+    min-width: 0;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--ink);
+    background: #fff;
+    border: 1.5px solid #cfd8e6;
+    border-radius: 14px;
+    padding: 13px 15px;
+    line-height: 1.55;
+    min-height: 53px;
+    transition: border-color .2s, box-shadow .2s;
+}
+.shareform .sfield select:focus {
+    outline: none;
+    border-color: #09305e;
+    box-shadow: 0 0 0 3px rgba(9, 48, 94, .14);
+}
+.shareform .sfield input, .shareform .sfield textarea { min-width: 0; }
+.shareform > button { justify-self: start; }

@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
 			<?php endif; ?>
 		</div>
 		<nav class="nav__links" aria-label="<?php echo esc_attr( nada_text( 'Primary' ) ); ?>">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nada-menu', 'fallback_cb' => 'nada_default_menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nada-menu', 'fallback_cb' => 'nada_default_menu', 'walker' => new NADA_Mega_Menu_Walker(), 'nada_mega' => true ) ); ?>
 		</nav>
 		<div class="nav__cta">
 			<?php get_template_part( 'template-parts/language-switcher' ); ?>

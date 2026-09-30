@@ -20,8 +20,63 @@ add_action( 'acf/init', function () {
 add_filter( 'nav_menu_item_title', function ( $title, $item, $args, $depth ) {
 	if ( 'primary' !== ( $args->theme_location ?? '' ) || 1 !== $depth ) { return $title; }
 	$image = absint( get_post_meta( $item->ID, 'nada_menu_image', true ) );
-	return ( $image ? wp_get_attachment_image( $image, 'medium', false, array( 'alt' => '', 'loading' => 'lazy' ) ) : '' ) . '<b>' . $title . '</b>';
+	return ( $image ? '<span class="megacard__img">' . wp_get_attachment_image( $image, 'medium_large', false, array( 'alt' => '', 'loading' => 'lazy' ) ) . '</span>' : '' ) . '<b>' . $title . '</b>';
 }, 10, 4 );
+
+/** Use the source panel layout while preserving native menu items and filters. */
+class NADA_Mega_Menu_Walker extends Walker_Nav_Menu {
+    private $panel_title = '';
+
+    public function start_el( &$output, $data_object, $depth = 0, $args = null, $current_object_id = 0 ) {
+        if ( 0 === $depth ) {
+            $this->panel_title = apply_filters( 'the_title', $data_object->title, $data_object->ID );
+        }
+        parent::start_el( $output, $data_object, $depth, $args, $current_object_id );
+    }
+
+    public function start_lvl( &$output, $depth = 0, $args = null ) {
+        if ( 0 !== $depth ) {
+            parent::start_lvl( $output, $depth, $args );
+            return;
+        }
+        $output .= '<div class="navdd__panel"><div class="mega">';
+        $output .= '<div class="mega__head"><span class="mega__title">' . esc_html( wp_strip_all_tags( $this->panel_title ) ) . '</span></div>';
+        $output .= '<ul class="sub-menu nada-mega-list mega__grid mega__grid--rec">';
+    }
+
+    public function end_lvl( &$output, $depth = 0, $args = null ) {
+        if ( 0 === $depth ) {
+            $output .= '</ul></div></div>';
+        } else {
+            parent::end_lvl( $output, $depth, $args );
+        }
+    }
+}
+
+add_filter( 'nav_menu_css_class', function ( $classes, $item, $args, $depth ) {
+    if ( ! empty( $args->nada_mega ) && 0 === $depth && in_array( 'menu-item-has-children', $classes, true ) ) {
+        $classes[] = 'navdd';
+        $classes[] = 'navdd--mega';
+    }
+    return $classes;
+}, 10, 4 );
+
+add_filter( 'nav_menu_link_attributes', function ( $attributes, $item, $args, $depth ) {
+    if ( ! empty( $args->nada_mega ) && 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
+        $attributes['class'] = trim( ( $attributes['class'] ?? '' ) . ' navdd__top' );
+    }
+    if ( ! empty( $args->nada_mega ) && 1 === $depth ) {
+        $attributes['class'] = trim( ( $attributes['class'] ?? '' ) . ' megacard megacard--rec' );
+    }
+    return $attributes;
+}, 10, 4 );
+
+add_filter( 'nav_menu_item_title', function ( $title, $item, $args, $depth ) {
+    if ( ! empty( $args->nada_mega ) && 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
+        $title .= '<span class="navdd__chev" aria-hidden="true"></span>';
+    }
+    return $title;
+}, 15, 4 );
 
 /** Restore source navigation only for the starter menus owned by this theme. */
 add_action( 'admin_init', function () {
@@ -80,3 +135,26 @@ add_action( 'admin_init', function () {
 	}
 	update_option( 'nada_navigation_design_version', 1, false );
 } );
+
+/** Replace only the earlier starter thumbnails with the original menu photography. */
+add_action( 'admin_init', function () {
+    if ( ! current_user_can( 'edit_theme_options' ) || get_option( 'nada_mega_photos_version' ) || ! function_exists( 'update_field' ) ) { return; }
+    $photos = array( 'breakfast' => 'parfait', 'smoothies' => 'smoothie', 'dips' => 'tzatziki', 'savoury' => 'chicken', 'desserts' => 'bark', 'snacks' => 'honeybowl' );
+    $complete = true;
+    foreach ( array( 'en', 'ar' ) as $language ) {
+        $menu = wp_get_nav_menu_object( 'NADA navigation ' . strtoupper( $language ) );
+        if ( ! $menu ) { continue; }
+        foreach ( wp_get_nav_menu_items( $menu ) as $item ) {
+            if ( ! $item->menu_item_parent ) { continue; }
+            $current = absint( get_post_meta( $item->ID, 'nada_menu_image', true ) );
+            $source = get_post_meta( $current, '_nada_source_image', true );
+            foreach ( $photos as $old => $new ) {
+                if ( 'assets/img/recipes/recipe-' . $old . '.jpg' !== $source ) { continue; }
+                $image = nada_import_image( 'assets/img/recipe-' . $new . '.jpg', $item->title );
+                if ( $image ) { update_field( 'field_nada_menu_image', $image, $item->ID ); }
+                else { $complete = false; }
+            }
+        }
+    }
+    if ( $complete ) { update_option( 'nada_mega_photos_version', 1, false ); }
+}, 35 );

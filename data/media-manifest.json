@@ -1,7 +1,7 @@
 {
   "version": "3.3.8",
-  "url": "https://github.com/pmunankarmi/nada/releases/download/media-3.3.8/nada-media-3.3.8.zip",
-  "sha256": "8cc4f778108ec3ddc7d51264c58ab1192c2380b3efa0bf44ee07e9db18e35d98",
+  "url": "https://github.com/pmunankarmi/nada/releases/download/media-3.3.8-2/nada-media-3.3.8-2.zip",
+  "sha256": "96251e6828e6e3709d2bff62c3f1b00b3fdd6b2db2097bed397bf33884680b88",
   "files": {
     "assets/img/cutouts/hero-plate-pack-ar-v2.webp": "2515c344e16f1504c290d341dc08a3364119a4d3e1c6aeb320f9d929c7e197b0",
     "assets/img/cutouts/hero-plate-pack-en-v2.webp": "588896f5e50851125a5d048faff9ef63740d2f4047d01327d74fbfb9f40e199f",
@@ -80,6 +80,12 @@
     "assets/img/swaps/swap-sour.jpg": "c0345b00bb4d5d53e46cc5ddaa9b730eb6ade7d9ab17cd539718f88f5b0e864d",
     "assets/img/why/badge-protein-t.png": "47ce89e010d89e72e999d2ea6e7d87eb0e9b8b9552592e884dd81fd207ca4ee3",
     "assets/img/why/badge-recipes-t.png": "c8949eba6c7fd6520ac713f89691cced83269116839cbc6d83d325329ef0433b",
-    "assets/img/why/badge-thick-t.png": "9e977d7b6701cda5af3f3754743105e4c23eee57d8b5272186b896a8e0833ec0"
+    "assets/img/why/badge-thick-t.png": "9e977d7b6701cda5af3f3754743105e4c23eee57d8b5272186b896a8e0833ec0",
+    "assets/img/recipe-parfait.jpg": "4a6dbf53a709ccf1730caf7c7d08df3e7ee70740bf4e7812de4b3f7bbe0940b8",
+    "assets/img/recipe-smoothie.jpg": "0f651995c57b6720439e3c814ccf50ae8d5f9ccfe5bf84fb72398ac6d0ee0d5c",
+    "assets/img/recipe-tzatziki.jpg": "98353403c63097aa66fc15a1e2b059a6df2d8c9b4b5345602d01f23d80437791",
+    "assets/img/recipe-chicken.jpg": "98762bf49c2c395b2f1619f9538e7ff3532308a7cf165d4aa5586bc500048a4b",
+    "assets/img/recipe-bark.jpg": "e01f6a11a2a2c7aa4e76ee3355bea81b6c2f9d1188da101bc07e744a2ac284d6",
+    "assets/img/recipe-honeybowl.jpg": "00bde8deaef53a31b8270d8c53c3b3046c7638c807f6ae1e69bc7d9a84370f9e"
   }
 }

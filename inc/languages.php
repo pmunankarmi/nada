@@ -30,7 +30,7 @@ add_action( 'init', function () {
 	if ( ! function_exists( 'pll_register_string' ) ) {
 		return;
 	}
-	foreach ( array( 'Why Greek', 'Recipes', 'Products', 'Share Your Recipe', 'All', 'Ingredients', 'How to prepare', 'Read recipe', 'View product', 'Search', 'No results found.', 'Your email', 'Recipe name', 'Category', 'One ingredient per line.', 'Send My Recipe →', 'Thanks for sharing!', 'Your recipe is awaiting review.', 'Something went wrong. Please try again.', 'Preparation time', 'Cooking time', 'Total time', 'Servings' ) as $text ) {
+	foreach ( nada_data( 'ui-labels' ) as $text ) {
 		pll_register_string( 'nada-' . sanitize_title( $text ), $text, 'NADA' );
 	}
 } );

@@ -67,6 +67,30 @@ add_action( 'acf/init', function () {
 	foreach ( nada_data( 'email-templates' ) as $name => $template ) {
 		$fields[] = array( 'key' => 'field_nada_' . $name, 'name' => $name, 'label' => $template['label'], 'type' => $template['type'], 'new_lines' => '', 'instructions' => $template['instructions'] );
 	}
+    // Keep archive settings together and explain the page where they appear.
+    $grouped = array();
+    $archive_fields = array( 'recipes' => array(), 'products' => array() );
+    foreach ( $fields as $field ) {
+        $name = $field['name'] ?? '';
+        $archive = str_starts_with( $name, 'recipes_' ) ? 'recipes' : ( str_starts_with( $name, 'products_' ) ? 'products' : '' );
+        if ( $archive ) {
+            $archive_fields[ $archive ][] = $field;
+        } else {
+            $grouped[] = $field;
+        }
+    }
+    foreach ( $archive_fields as $archive => $items ) {
+        $grouped[] = array( 'key' => 'field_nada_options_' . $archive, 'label' => ucfirst( $archive ) . ' page', 'type' => 'tab' );
+        foreach ( $items as $field ) {
+            $name = $field['name'];
+            $section = str_contains( $name, '_rbooktop_' ) ? 'Page introduction' : ( str_contains( $name, '_swaps_' ) ? 'Kitchen swaps' : ( str_contains( $name, '_section_4_' ) || str_contains( $name, '_section_3_' ) ? 'Bottom call to action' : 'Page banner' ) );
+            $field['instructions'] = 'Used on the ' . ucfirst( $archive ) . ' page → ' . $section . '. ' . ( $field['instructions'] ?? '' );
+            if ( str_contains( $name, '_rbooktop_a_pot_' ) ) { $field['label'] = 'Page heading — ' . strtoupper( substr( $name, -2 ) ); }
+            if ( str_contains( $name, '_rbooktop_thick_' ) ) { $field['label'] = 'Page introduction — ' . strtoupper( substr( $name, -2 ) ); }
+            $grouped[] = $field;
+        }
+    }
+    $fields = $grouped;
 	acf_add_local_field_group( array( 'key' => 'group_nada_options', 'title' => 'Global settings', 'fields' => $fields, 'location' => array( array( array( 'param' => 'options_page', 'operator' => '==', 'value' => 'nada-options' ) ) ) ) );
 } );
 
@@ -85,3 +109,32 @@ add_filter( 'acf/update_value/key=field_nada_site_logo', function ( $value, $pos
 	}
 	return $value;
 }, 10, 2 );
+
+/** Fill missed starter translations and remove unused labels without replacing edits. */
+add_action( 'admin_init', function () {
+    if ( ! current_user_can( 'edit_theme_options' ) || ! function_exists( 'update_field' ) || get_option( 'nada_options_cleanup_version' ) ) { return; }
+    $rows = get_field( 'ui_labels', 'option' );
+    if ( ! is_array( $rows ) ) { return; }
+    // Preserve a recoverable copy of the three retired navigation labels.
+    add_option( 'nada_ui_labels_before_cleanup', $rows, '', false );
+    $rows = array_values( array_filter( $rows, static function ( $row ) {
+        return ! in_array( $row['key'] ?? '', array( 'Why Greek', 'Recipes', 'Products' ), true );
+    } ) );
+    update_field( 'field_nada_ui_labels', $rows, 'option' );
+    foreach ( nada_data( 'repeaters' ) as $name => $definition ) {
+        if ( 'recipes' !== $definition['page'] ) { continue; }
+        $rows = get_field( $name . '_ar', 'option' );
+        if ( ! is_array( $rows ) ) { continue; }
+        foreach ( $rows as &$row ) {
+            foreach ( $definition['fields'] as $key => $field ) {
+                $value = $row[ $key ] ?? '';
+                if ( is_string( $value ) && isset( nada_data( 'translations' )[ $value ] ) ) {
+                    $row[ $key ] = nada_translate( $value, 'ar' );
+                }
+            }
+        }
+        unset( $row );
+        update_field( 'field_nada_' . $name . '_ar', $rows, 'option' );
+    }
+    update_option( 'nada_options_cleanup_version', 1, false );
+}, 40 );
