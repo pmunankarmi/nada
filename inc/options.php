@@ -47,16 +47,17 @@ add_action( 'acf/init', function () {
 	$fields[] = array( 'key' => 'field_nada_options_social', 'label' => 'Social Media', 'type' => 'tab' );
 	$fields[] = array( 'key' => 'field_nada_social_links', 'name' => 'social_links', 'label' => 'Social media links', 'type' => 'repeater', 'layout' => 'table', 'sub_fields' => array( nada_acf_text( 'social_label', 'Name' ), array( 'key' => 'field_nada_social_url', 'name' => 'social_url', 'label' => 'URL', 'type' => 'url' ) ) );
 	$fields[] = array( 'key' => 'field_nada_options_contact', 'label' => 'Contact', 'type' => 'tab' );
+	$fields[] = nada_acf_text( 'contact_email', 'Email', 'email' );
+	$fields[] = nada_acf_text( 'contact_phone', 'Phone' );
+	$fields[] = nada_acf_text( 'contact_address_en', 'Address — English', 'textarea' );
+	$fields[] = nada_acf_text( 'contact_address_ar', 'Address — Arabic', 'textarea' );
+	$fields[] = array( 'key' => 'field_nada_options_notifications', 'label' => 'Notifications', 'type' => 'tab' );
 	$fields[] = array( 'key' => 'field_nada_submission_sender_email', 'name' => 'submission_sender_email', 'label' => 'Recipe submissions — sender email', 'type' => 'email', 'instructions' => 'From address for admin notifications and submitter acknowledgements. Use an address authorized by your mail service. Submitter acknowledgements require a valid sender address.' );
 	$fields[] = array( 'key' => 'field_nada_submission_receiver_email', 'name' => 'submission_receiver_email', 'label' => 'Recipe submissions — receiver email', 'type' => 'email', 'instructions' => 'Notifications go to this address. Leave empty to disable email notifications; submissions are still saved in Recipe Submissions.' );
 	$fields[] = array( 'key' => 'field_nada_submission_confirmation_enabled', 'name' => 'submission_confirmation_enabled', 'label' => 'Email acknowledgement to submitter', 'type' => 'true_false', 'ui' => 1, 'default_value' => 1, 'instructions' => 'Send a receipt to the visitor who submitted the recipe. Requires a sender email above.' );
 	foreach ( nada_data( 'email-templates' ) as $name => $template ) {
 		$fields[] = array( 'key' => 'field_nada_' . $name, 'name' => $name, 'label' => $template['label'], 'type' => $template['type'], 'new_lines' => '', 'instructions' => $template['instructions'] );
 	}
-	$fields[] = nada_acf_text( 'contact_email', 'Email', 'email' );
-	$fields[] = nada_acf_text( 'contact_phone', 'Phone' );
-	$fields[] = nada_acf_text( 'contact_address_en', 'Address — English', 'textarea' );
-	$fields[] = nada_acf_text( 'contact_address_ar', 'Address — Arabic', 'textarea' );
 	acf_add_local_field_group( array( 'key' => 'group_nada_options', 'title' => 'Global settings', 'fields' => $fields, 'location' => array( array( array( 'param' => 'options_page', 'operator' => '==', 'value' => 'nada-options' ) ) ) ) );
 } );
 

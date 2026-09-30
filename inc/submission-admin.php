@@ -50,7 +50,7 @@ function nada_submissions_screen() {
 	<div class="wrap">
 		<h1>Recipe Submissions</h1>
 		<p>Review recipes submitted through the website. Open a recipe to edit its ingredients and method, then publish or move it to Trash using WordPress.</p>
-		<p><a href="<?php echo esc_url( admin_url( 'admin.php?page=nada-options' ) ); ?>">Configure notification emails in Theme Options → Contact</a>. Mail acceptance does not confirm delivery to the recipient.</p>
+		<p><a href="<?php echo esc_url( admin_url( 'admin.php?page=nada-options' ) ); ?>">Configure notification emails in Theme Options → Notifications</a>. Mail acceptance does not confirm delivery to the recipient.</p>
 		<form method="get">
 			<input type="hidden" name="page" value="nada-submissions">
 			<label for="nada-submission-status">Status</label>
