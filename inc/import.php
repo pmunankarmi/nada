@@ -21,7 +21,7 @@ function nada_import_image( $path, $title ) {
 	if ( $existing ) {
 		return $existing[0];
 	}
-	$source = get_template_directory() . '/' . $path;
+	$source = nada_media_directory() . $path;
 	if ( ! is_readable( $source ) || ! str_starts_with( $path, 'assets/img/' ) || str_contains( $path, '..' ) ) {
 		return 0;
 	}
@@ -72,6 +72,7 @@ function nada_import_content() {
 	}
 	update_option( 'nada_import_lock', time(), false );
 	try {
+		nada_prepare_media();
 		$term_ids = array();
 		$definitions = array(
 			'recipe_category' => array( 'breakfast' => array( 'Breakfast', 'فطور' ), 'dips' => array( 'Dips', 'تغميسات' ), 'dessert' => array( 'Dessert', 'حلويات' ), 'savoury' => array( 'Savoury', 'أطباق مالحة' ), 'drinks' => array( 'Drinks', 'مشروبات' ) ),

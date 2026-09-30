@@ -50,6 +50,7 @@ add_filter( 'update_themes_github.com', 'nada_github_update', 10, 3 );
 add_action( 'load-update-core.php', function () {
 	if ( current_user_can( 'update_themes' ) && isset( $_GET['force-check'] ) ) {
 		delete_transient( 'nada_github_release' );
+		delete_site_transient( 'update_themes' );
 	}
 } );
 

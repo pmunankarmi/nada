@@ -98,6 +98,11 @@ function nada_asset( $path ) {
 		$url = get_the_post_thumbnail_url( $images[ $path ], 'full' );
 		if ( $url ) { return $url; }
 	}
+	$manifest = nada_data( 'media-manifest' );
+	if ( isset( $manifest['files'][ $path ] ) ) {
+		$uploads = wp_upload_dir();
+		return trailingslashit( $uploads['baseurl'] ) . 'nada/3.3.8/' . $path;
+	}
 	return get_theme_file_uri( '/' . ltrim( $path, '/' ) );
 }
 

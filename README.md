@@ -12,16 +12,18 @@ Classic WordPress conversion of the supplied **NADAfinal3.3.8** HTML package. Re
 6. In **Appearance → Menus**, create primary and footer menus for each language and assign their locations. The theme supplies basic navigation until menus are assigned.
 7. Review both languages and configure global settings before launch.
 
-The importer is explicit, never runs on activation, and preserves already imported posts when repeated. Do not interrupt it while it is importing images. An interrupted import may need missing media checked manually; re-running does not overwrite editorial changes. Take a staging backup before importing into a site with existing content because the first import sets its front page.
+The importer downloads the separate checksum-verified `media-3.3.8` release into `wp-content/uploads/nada/3.3.8/`. Admin-editable image files are excluded from theme ZIPs; existing installations migrate the uploads package when an administrator opens the dashboard after updating. Background and fixed design assets stay in the theme.
+
+The content importer is explicit, never runs on activation, and preserves already imported posts when repeated. Do not interrupt it while it is importing images. An interrupted import may need missing media checked manually; re-running does not overwrite editorial changes. Take a staging backup before importing into a site with existing content because the first import sets its front page.
 
 ## Editing
 
-- **Pages:** homepage, Why Greek, and Share Recipe have plain-text ACF fields. Repeaters manage repeated claims and tiles. Template parts contain all HTML; fields never require HTML.
+- **Pages:** homepage, Why Greek, and Share Recipe have plain-text ACF fields. Homepage fields are grouped into eight section tabs with each section’s repeaters alongside its copy. Repeaters manage repeated claims and tiles. Template parts contain all HTML; fields never require HTML.
 - **Recipes:** title, excerpt, featured image, category, preparation/cooking/total times, servings, ingredient repeater, and method repeater. Each translated post owns its own text and featured image.
 - **Products:** title, content, featured image, fat taxonomy, plain-text summary, and optional nutrition rows. No nutritional values are invented during import.
-- **Content Images:** under Appearance, reusable campaign artwork records expose WordPress's native **Featured image** control. The homepage hero uses the homepage's featured image. Decorative CSS textures and SVG symbols remain theme assets. Repeated artwork follows the layout's ordered slots.
+- **Content Images:** under Appearance, reusable campaign artwork records expose WordPress's native **Featured image** control. The homepage hero uses the homepage's featured image. All admin-editable images live in WordPress uploads. Fixed background artwork, decorative CSS textures and SVG symbols remain theme assets. Repeated artwork follows the layout's ordered slots.
 - **Theme Options:** language-specific footer and CTA text, CTA URL, social repeater, and archive copy. ACF Pro registers these fields in PHP, so no field-group import is required.
-- **Site Logo:** Theme Options links to the native media picker under Appearance → Site Logo. This and Customize → Site Identity read/write the same `custom_logo` theme mod. The logo cannot drift out of sync, and there is no ACF image field.
+- **Site Logo:** Theme Options links directly to Customize → Site Identity. The Customizer alone manages the native `custom_logo` theme mod. The logo cannot drift out of sync, and there is no ACF image field.
 - **Translations:** edit the linked EN/AR posts and terms in Polylang. Small UI strings can be changed in Languages → Translations. Supplied Arabic text is included as a server-rendered fallback; no local-storage language switcher or browser translation script is used.
 - **Recipe submissions:** the form saves a pending recipe with text-only ingredients and steps. It validates nonce, fields and category language, has a honeypot and IP-hash rate limit, and does not email anyone or publish automatically. The submitter email is private post meta; it is never rendered publicly.
 
@@ -37,7 +39,7 @@ The supplied helper shares **post/page** slugs, not taxonomy term slugs. Free-ed
 
 Every push to **main** runs `.github/workflows/release.yml`: lint PHP, validate theme data, build `nada.zip`, and publish a release numbered `1.0.<GitHub run number>`. The ZIP always contains a `nada/` root directory and its version header matches the release. Development branches do not publish releases.
 
-The theme checks the public repository's latest release through WordPress's native `Update URI` filter. Updates appear in **Dashboard → Updates** and **Appearance → Themes** after WordPress's scheduled update check, or when an administrator clicks **Check again**. The GitHub response is cached for an hour; Check again clears it. Installing updates remains the normal WordPress admin action; code changes are not silently deployed.
+The theme checks the public repository's latest release through WordPress's native `Update URI` filter. Updates appear in **Dashboard → Updates** and **Appearance → Themes** after WordPress's scheduled update check, or when an administrator clicks **Check again**. The GitHub response is cached for an hour; Check again clears it and the native theme update cache. Appearance → NADA Updates includes a connection test for host troubleshooting. Installing updates remains the normal WordPress admin action; code changes are not silently deployed.
 
 Keep Actions enabled and allow the workflow its declared `contents: write` permission. Repository must remain public for this token-free updater. Do not distribute GitHub's auto-generated source ZIP as the theme: use the release asset **nada.zip**. Make site-specific code changes in a child theme because updating replaces parent-theme files. Content and global options remain in the database.
 

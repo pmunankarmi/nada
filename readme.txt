@@ -7,7 +7,7 @@ After activation:
 - Select non-Plain permalinks.
 - Use Appearance > NADA Setup to import bilingual starter content.
 - Use Appearance > Theme Options for global content.
-- Use Appearance > Site Logo or Customize > Site Identity for the same native logo.
+- Use Customize > Site Identity for the native site logo. Theme Options links there.
 - Use Featured Image on recipes, products, the homepage and Content Images.
 
 Source, instructions and updates: https://github.com/pmunankarmi/nada

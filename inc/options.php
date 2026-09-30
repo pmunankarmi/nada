@@ -11,7 +11,7 @@ add_action( 'acf/init', function () {
 	if ( ! function_exists( 'acf_add_options_page' ) ) { return; }
 	acf_add_options_page( array( 'page_title' => 'NADA Theme Options', 'menu_title' => 'Theme Options', 'menu_slug' => 'nada-options', 'capability' => 'edit_theme_options', 'redirect' => false, 'parent_slug' => 'themes.php' ) );
 	$fields = array(
-		array( 'key' => 'field_nada_logo_help', 'label' => 'Site logo', 'type' => 'message', 'message' => '<a href="' . esc_url( admin_url( 'themes.php?page=nada-logo' ) ) . '">Choose or remove the site logo</a>. This is the same native logo used by Appearance → Customize → Site Identity. No separate image field is stored.' ),
+		array( 'key' => 'field_nada_logo_help', 'label' => 'Site logo', 'type' => 'message', 'message' => '<a href="' . esc_url( admin_url( 'customize.php?autofocus[section]=title_tagline' ) ) . '">Open Customizer → Site Identity</a>. Manage the native WordPress site logo in the Customizer. Theme Options and the site use this same logo. No separate image field is stored.' ),
 		nada_acf_text( 'footer_text_en', 'Footer text — English' ),
 		nada_acf_text( 'footer_text_ar', 'Footer text — Arabic' ),
 		nada_acf_text( 'cta_label_en', 'CTA label — English' ),
@@ -41,36 +41,3 @@ add_action( 'acf/init', function () {
 	}
 	acf_add_local_field_group( array( 'key' => 'group_nada_options', 'title' => 'Global settings', 'fields' => $fields, 'location' => array( array( array( 'param' => 'options_page', 'operator' => '==', 'value' => 'nada-options' ) ) ) ) );
 } );
-
-add_action( 'admin_menu', function () {
-	add_theme_page( 'NADA Site Logo', 'Site Logo', 'edit_theme_options', 'nada-logo', 'nada_logo_screen' );
-} );
-
-function nada_logo_screen() {
-	if ( ! current_user_can( 'edit_theme_options' ) ) {
-		return;
-	}
-	if ( isset( $_POST['nada_logo_nonce'] ) ) {
-		check_admin_referer( 'nada_logo', 'nada_logo_nonce' );
-		$id = absint( $_POST['logo_id'] ?? 0 );
-		if ( ! $id || wp_attachment_is_image( $id ) ) {
-			set_theme_mod( 'custom_logo', $id );
-		}
-	}
-	wp_enqueue_media();
-	wp_enqueue_script( 'nada-admin-logo', get_theme_file_uri( '/assets/js/admin-logo.js' ), array( 'jquery' ), '1.0.0', true );
-	?>
-	<div class="wrap">
-		<h1><?php esc_html_e( 'NADA Site Logo', 'nada' ); ?></h1>
-		<p><?php esc_html_e( 'Changes here and in the Customizer use the same WordPress custom_logo setting.', 'nada' ); ?></p>
-		<form method="post">
-			<?php wp_nonce_field( 'nada_logo', 'nada_logo_nonce' ); ?>
-			<div id="nada-logo-preview"><?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'medium' ); ?></div>
-			<input type="hidden" id="nada-logo-id" name="logo_id" value="<?php echo esc_attr( get_theme_mod( 'custom_logo' ) ); ?>">
-			<button class="button" id="nada-select-logo" type="button">Choose logo</button>
-			<button class="button" id="nada-remove-logo" type="button">Remove logo</button>
-			<?php submit_button(); ?>
-		</form>
-	</div>
-	<?php
-}

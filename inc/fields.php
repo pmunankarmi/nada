@@ -38,6 +38,33 @@ add_action( 'acf/init', function () {
 			}
 			$fields[] = array( 'key' => 'field_nada_' . $name, 'name' => $name, 'label' => $definition['label'], 'type' => 'repeater', 'layout' => 'block', 'button_label' => 'Add item', 'sub_fields' => $sub_fields );
 		}
+		if ( 'home' === $page ) {
+			$sections = array(
+				'home_hero' => 'Hero',
+				'home_reasons' => 'Why Greek',
+				'home_kitchen' => 'Kitchen swaps',
+				'home_recipes' => 'Recipes banner',
+				'home_section_5' => 'Recipe categories',
+				'home_community' => 'Community banner',
+				'home_section_7' => 'Community gallery',
+				'home_section_8' => 'Product CTA',
+			);
+			$grouped_fields = array();
+			foreach ( $sections as $prefix => $label ) {
+				$grouped_fields[] = array(
+					'key' => 'field_nada_tab_' . $prefix,
+					'label' => $label,
+					'type' => 'tab',
+					'placement' => 'top',
+				);
+				foreach ( $fields as $field ) {
+					if ( str_starts_with( $field['name'], $prefix . '_' ) ) {
+						$grouped_fields[] = $field;
+					}
+				}
+			}
+			$fields = $grouped_fields;
+		}
 		acf_add_local_field_group( array( 'key' => 'group_nada_' . $page, 'title' => 'NADA ' . ucfirst( $page ) . ' content', 'fields' => $fields, 'location' => array( array( $location ) ) ) );
 	}
 
