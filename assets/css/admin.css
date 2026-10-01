@@ -1,0 +1,10 @@
+/* NADAfinal3.3.8 editor previews: contrast for transparent white claim artwork. */
+.acf-field[data-key="field_nada_home_reasons_wgclaims_image"] .image-wrap {
+    background: #09305e;
+    border-radius: 8px;
+    padding: 10px;
+}
+.acf-field[data-key="field_nada_home_reasons_wgclaims_image"] .image-wrap img {
+    display: block;
+    background: transparent;
+}

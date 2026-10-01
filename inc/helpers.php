@@ -27,6 +27,8 @@ function nada_translate( $text, $language = '' ) {
 }
 
 function nada_text( $text ) {
+	$value = nada_string_translation( 'label:' . $text, nada_language() );
+	if ( null !== $value ) { return $value; }
 	foreach ( (array) nada_option( 'ui_labels', array() ) as $row ) {
 		if ( ( $row['key'] ?? '' ) === $text ) { return $row[ 'ui_' . nada_language() ] ?? ''; }
 	}
@@ -61,6 +63,18 @@ function nada_rows( $name ) {
 	$defaults = nada_data( 'repeaters' );
 	$archive = 'recipes' === ( $defaults[ $name ]['page'] ?? '' );
 	$field_name = $archive ? $name . '_' . nada_language() : $name;
+    if ( $archive && get_option( 'nada_string_catalog_version' ) ) {
+        $rows = array();
+        $count = (int) get_option( 'options_' . $field_name, 0 );
+        for ( $index = 0; $index < $count; $index++ ) {
+            $row = array( 'image' => get_option( 'options_' . $field_name . '_' . $index . '_image', 0 ) );
+            foreach ( $defaults[ $name ]['fields'] as $key => $definition ) {
+                $row[ $key ] = nada_string_translation( 'row:' . $name . ':' . $index . ':' . $key, nada_language() ) ?? '';
+            }
+            $rows[] = $row;
+        }
+        return $rows;
+    }
 	$rows = function_exists( 'get_field' ) ? get_field( $field_name, $archive ? 'option' : get_the_ID() ) : null;
 	if ( is_array( $rows ) ) {
 		return $rows;
@@ -103,6 +117,14 @@ function nada_asset( $path ) {
 }
 
 function nada_option( $name, $default = '' ) {
+	$language = nada_language();
+	$base = $name;
+	if ( preg_match( '/_(en|ar)$/', $name, $matches ) ) {
+		$language = $matches[1];
+		$base = substr( $name, 0, -3 );
+	}
+	$value = nada_string_translation( 'option:' . $base, $language );
+	if ( null !== $value ) { return $value; }
 	$value = function_exists( 'get_field' ) ? get_field( $name, 'option' ) : null;
 	return false === get_option( 'options_' . $name, false ) ? $default : $value;
 }

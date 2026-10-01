@@ -52,7 +52,8 @@ add_action( 'acf/init', function () {
 		}
 	}
 	$fields[] = array( 'key' => 'field_nada_options_translation', 'label' => 'Language Translation', 'type' => 'tab' );
-	$fields[] = array( 'key' => 'field_nada_ui_labels', 'name' => 'ui_labels', 'label' => 'Site labels and messages', 'type' => 'repeater', 'layout' => 'table', 'sub_fields' => array( array( 'key' => 'field_nada_ui_key', 'name' => 'key', 'label' => 'Label reference', 'type' => 'text', 'readonly' => 1 ), nada_acf_text( 'ui_en', 'English' ), nada_acf_text( 'ui_ar', 'Arabic' ) ) );
+	$fields[] = array( 'key' => 'field_nada_translation_location', 'label' => 'Edit shared text', 'type' => 'message', 'message' => '<a href="' . esc_url( admin_url( 'admin.php?page=mlang_strings&group=NADA' ) ) . '">Open Languages → Translations → NADA</a><p>English and Arabic labels, footer and CTA copy, contact address, recipe/product page copy, kitchen swap text, and notification messages are edited there. Page content and navigation remain in their native WordPress editors.</p>', 'esc_html' => 0 );
+	$fields[] = array( 'key' => 'field_nada_ui_labels', 'name' => 'ui_labels', 'label' => 'Site labels and messages', 'instructions' => 'These labels are synchronized with Languages → Translations → NADA. Edit English or Arabic in either location.', 'type' => 'repeater', 'layout' => 'table', 'sub_fields' => array( array( 'key' => 'field_nada_ui_key', 'name' => 'key', 'label' => 'Label reference', 'type' => 'text', 'readonly' => 1 ), nada_acf_text( 'ui_en', 'English' ), nada_acf_text( 'ui_ar', 'Arabic' ) ) );
 	$fields[] = array( 'key' => 'field_nada_options_social', 'label' => 'Social Media', 'type' => 'tab' );
 	$fields[] = array( 'key' => 'field_nada_social_links', 'name' => 'social_links', 'label' => 'Social media links', 'type' => 'repeater', 'layout' => 'table', 'sub_fields' => array( nada_acf_text( 'social_label', 'Name' ), array( 'key' => 'field_nada_social_url', 'name' => 'social_url', 'label' => 'Link', 'type' => 'link', 'return_format' => 'array' ) ) );
 	$fields[] = array( 'key' => 'field_nada_options_contact', 'label' => 'Contact', 'type' => 'tab' );
@@ -138,3 +139,40 @@ add_action( 'admin_init', function () {
     }
     update_option( 'nada_options_cleanup_version', 1, false );
 }, 40 );
+
+/** Keep original field definitions for imports, but edit translated copy in Polylang. */
+add_filter( 'acf/prepare_field', function ( $field ) {
+	$key = $field['key'] ?? '';
+	if ( ! str_starts_with( $key, 'field_nada_' ) || ! get_option( 'nada_string_catalog_version' ) ) { return $field; }
+	$name = $field['name'] ?? '';
+	if ( 'ui_labels' === $name ) { return false; }
+	$base = preg_replace( '/_(en|ar)$/', '', $name );
+	if ( isset( get_option( 'nada_string_catalog', array() )[ 'option:' . $base ] ) ) { return false; }
+	if ( 'repeater' === $field['type'] && str_starts_with( $name, 'recipes_' ) ) { return false; }
+	return $field;
+} );
+
+/** Provide image controls independently of the translated, fixed archive cards. */
+add_action( 'acf/init', function () {
+	if ( ! function_exists( 'acf_add_local_field_group' ) ) { return; }
+	$fields = array();
+	foreach ( nada_data( 'repeaters' ) as $name => $definition ) {
+		if ( 'recipes' !== $definition['page'] ) { continue; }
+		foreach ( array( 'en', 'ar' ) as $language ) {
+			$count = (int) get_option( 'options_' . $name . '_' . $language, 0 );
+			for ( $index = 0; $index < $count; $index++ ) {
+				$field_name = $name . '_' . $language . '_' . $index . '_image';
+				$fields[] = array( 'key' => 'field_nada_archive_image_' . $language . '_' . $index, 'name' => $field_name, 'label' => 'Kitchen swap ' . ( $index + 1 ) . ' image — ' . strtoupper( $language ), 'type' => 'image', 'return_format' => 'id', 'preview_size' => 'thumbnail' );
+			}
+		}
+	}
+	if ( $fields ) {
+		acf_add_local_field_group( array( 'key' => 'group_nada_archive_images', 'title' => 'Recipe page — kitchen swap images', 'fields' => $fields, 'location' => array( array( array( 'param' => 'options_page', 'operator' => '==', 'value' => 'nada-options' ) ) ) ) );
+	}
+}, 20 );
+
+/** Dark preview backing makes the original white claim icons readable in ACF. */
+add_action( 'admin_enqueue_scripts', function () {
+	wp_register_style( 'nada-admin', get_theme_file_uri( '/assets/css/admin.css' ), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'nada-admin' );
+} );

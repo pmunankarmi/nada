@@ -26,14 +26,7 @@ add_action( 'after_setup_theme', function () {
 	}
 } );
 
-add_action( 'init', function () {
-	if ( ! function_exists( 'pll_register_string' ) ) {
-		return;
-	}
-	foreach ( nada_data( 'ui-labels' ) as $text ) {
-		pll_register_string( 'nada-' . sanitize_title( $text ), $text, 'NADA' );
-	}
-} );
+require_once get_template_directory() . '/inc/string-translations.php';
 
 // Do not copy translation-specific text fields or thumbnails across languages.
 add_filter( 'pll_copy_post_metas', function ( $metas, $sync ) {
