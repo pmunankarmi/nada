@@ -41,7 +41,7 @@ data = dict(action='nada_submit_recipe', nada_nonce=nonce, return_id=page_id, ca
 request = urllib.request.Request(base + '/wp-admin/admin-post.php', urllib.parse.urlencode(data).encode())
 with urllib.request.urlopen(request) as response:
     assert 'recipe-status=success' in response.url, response.url
-print('PASS moderated submission accepted')
+print('PASS private form submission accepted')
 data['nada_nonce'] = 'invalid'
 request = urllib.request.Request(base + '/wp-admin/admin-post.php', urllib.parse.urlencode(data).encode())
 with urllib.request.urlopen(request) as response:
