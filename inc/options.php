@@ -144,7 +144,8 @@ add_action( 'admin_init', function () {
 add_filter( 'acf/prepare_field', function ( $field ) {
 	$key = $field['key'] ?? '';
 	if ( ! str_starts_with( $key, 'field_nada_' ) || ! get_option( 'nada_string_catalog_version' ) ) { return $field; }
-	$name = $field['name'] ?? '';
+	// ACF prefixes the input name before rendering; its field key stays stable.
+	$name = substr( $key, strlen( 'field_nada_' ) );
 	if ( 'ui_labels' === $name ) { return false; }
 	$base = preg_replace( '/_(en|ar)$/', '', $name );
 	if ( isset( get_option( 'nada_string_catalog', array() )[ 'option:' . $base ] ) ) { return false; }

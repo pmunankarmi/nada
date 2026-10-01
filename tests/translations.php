@@ -18,6 +18,7 @@ try {
     $group = acf_get_local_field_group('group_nada_options');
     $hidden = 0;
     foreach (acf_get_fields($group) as $field) {
+        $field['name'] = 'acf[' . $field['key'] . ']';
         if (false === apply_filters('acf/prepare_field', $field)) { $hidden++; }
     }
     if ($hidden < 30) { throw new Exception('Duplicate text editors remain visible.'); }
