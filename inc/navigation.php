@@ -62,6 +62,13 @@ add_filter( 'nav_menu_css_class', function ( $classes, $item, $args, $depth ) {
 }, 10, 4 );
 
 add_filter( 'nav_menu_link_attributes', function ( $attributes, $item, $args, $depth ) {
+    // Imported menu URLs are native custom links; mark their current page too.
+    $request_path = wp_parse_url( wp_unslash( $_SERVER['REQUEST_URI'] ?? '' ), PHP_URL_PATH );
+    $item_path = wp_parse_url( $item->url, PHP_URL_PATH );
+    if ( 0 === $depth && ! wp_parse_url( $item->url, PHP_URL_FRAGMENT ) && untrailingslashit( $request_path ?? '' ) === untrailingslashit( $item_path ?? '' ) ) {
+        $attributes['class'] = trim( ( $attributes['class'] ?? '' ) . ' is-current' );
+        $attributes['aria-current'] = 'page';
+    }
     if ( ! empty( $args->nada_mega ) && 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
         $attributes['class'] = trim( ( $attributes['class'] ?? '' ) . ' navdd__top' );
     }

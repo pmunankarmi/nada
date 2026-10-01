@@ -96,3 +96,15 @@ body.nada-menu-open { overflow: hidden; }
 }
 .shareform .sfield input, .shareform .sfield textarea { min-width: 0; }
 .shareform > button { justify-self: start; }
+
+/* Original catalog composition, including same-page recipe drawers. */
+[data-catalog-grid] > [hidden], [data-catalog-empty][hidden] { display: none !important; }
+.rec .dotc { background: var(--ink); }
+.nada-recipe-dialog { max-width: none; max-height: none; width: 100%; height: 100dvh; border: 0; margin: 0; color: var(--ink); background: transparent; }
+.nada-recipe-dialog:not([open]) { display: none; }
+.nada-recipe-dialog::backdrop { background: transparent; }
+.nada-recipe-dialog .modal__panel { text-align: start; }
+.nada-recipe-dialog .modal__meta { min-height: 0; }
+body.nada-recipe-open { overflow: hidden; }
+.nav__links .current-menu-item > a::after,
+.nav__links .current-menu-ancestor > a::after { transform: scaleX(1); }

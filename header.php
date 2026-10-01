@@ -8,7 +8,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?> data-theme="light">
+<html <?php language_attributes(); ?> data-theme="light" data-page="<?php echo esc_attr( nada_page_design() ); ?>">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">

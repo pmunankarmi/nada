@@ -88,7 +88,7 @@ add_action( 'acf/init', function () {
 		acf_add_local_field_group( array( 'key' => 'group_nada_' . $page, 'title' => 'NADA ' . ucfirst( $page ) . ' content', 'fields' => $fields, 'location' => array( array( $location ) ) ) );
 	}
 
-	$recipe_fields = array();
+	$recipe_fields = array( nada_acf_text( 'recipe_pairing', 'Pairs with' ) );
 	foreach ( array( 'prep' => 'Preparation time', 'cook' => 'Cooking time', 'total' => 'Total time', 'serves' => 'Servings' ) as $key => $label ) {
 		$recipe_fields[] = nada_acf_text( 'recipe_' . $key, $label );
 	}

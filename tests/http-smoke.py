@@ -29,12 +29,20 @@ for path, expected in paths.items():
         assert expected in html, f'{path}: missing {expected}'
         assert 'There has been a critical error' not in html
         assert 'NADAPHPTOKEN' not in html
+        if path in {'/products/', '/ar/products/'}:
+            assert len(re.findall(r'<article[^>]*data-categories=', html)) == 13
+            assert 'skufilter' in html and 'nada-search' not in html
+            assert not re.search(r'<a[^>]+href="[^"]+/products/[^"]+', html)
+        if path in {'/recipes/', '/ar/recipes/'}:
+            assert len(re.findall(r'<dialog ', html)) == 19
+            assert 'data-recipe-search' in html and 'modal__steps' in html
+            assert 'data-page="recipes"' in html
         assert not re.search(r'<(?:b|br)\s*/?>\s*(?:Warning|Fatal error)', html)
     print('PASS', path)
 html = urllib.request.urlopen(base + '/share-recipe/').read().decode()
 nonce = re.search(r'name="nada_nonce" value="([^"]+)"', html)[1]
 page_id = re.search(r'name="return_id" value="([^"]+)"', html)[1]
-category = re.search(r'<option value="(\d+)"', html)[1]
+category = re.search(r'name="category" value="(\d+)"', html)[1]
 data = dict(action='nada_submit_recipe', nada_nonce=nonce, return_id=page_id, category=category,
             language='en', recipe='Local integration recipe', ingredients='Yogurt\nHoney',
             method='Mix gently.\nServe.', email='test@example.test', website='')
