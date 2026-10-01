@@ -9,15 +9,23 @@
     const drawer = document.getElementById('drawer');
     if (!toggle || !drawer) return;
 
-    function setOpen(open) {
+    function setOpen(open, restoreFocus = true) {
         toggle.setAttribute('aria-expanded', String(open));
         drawer.setAttribute('aria-hidden', String(!open));
         drawer.inert = !open;
         drawer.classList.toggle('is-open', open);
         document.body.classList.toggle('nada-menu-open', open);
         if (open) drawer.querySelector('a')?.focus();
-        else toggle.focus();
+        else if (restoreFocus) toggle.focus();
     }
+    // Keep state in sync with the stylesheet's mobile navigation breakpoint.
+    const mobileMenu = window.matchMedia('(max-width: 1080px)');
+    mobileMenu.addEventListener('change', event => {
+        if (event.matches || toggle.getAttribute('aria-expanded') !== 'true') return;
+        const hadMenuFocus = drawer.contains(document.activeElement) || document.activeElement === toggle;
+        setOpen(false, false);
+        if (hadMenuFocus) nav.querySelector('.nav__links a')?.focus();
+    });
     toggle.addEventListener('click', function () {
         setOpen(toggle.getAttribute('aria-expanded') !== 'true');
     });

@@ -18,7 +18,7 @@ add_action( 'acf/init', function () {
 } );
 
 add_filter( 'nav_menu_item_title', function ( $title, $item, $args, $depth ) {
-	if ( 'primary' !== ( $args->theme_location ?? '' ) || 1 !== $depth ) { return $title; }
+	if ( empty( $args->nada_mega ) || 'primary' !== ( $args->theme_location ?? '' ) || 1 !== $depth ) { return $title; }
 	$image = absint( get_post_meta( $item->ID, 'nada_menu_image', true ) );
 	return ( $image ? '<span class="megacard__img">' . wp_get_attachment_image( $image, 'medium_large', false, array( 'alt' => '', 'loading' => 'lazy' ) ) . '</span>' : '' ) . '<b>' . $title . '</b>';
 }, 10, 4 );

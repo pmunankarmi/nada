@@ -108,3 +108,16 @@ body.nada-menu-open { overflow: hidden; }
 body.nada-recipe-open { overflow: hidden; }
 .nav__links .current-menu-item > a::after,
 .nav__links .current-menu-ancestor > a::after { transform: scaleX(1); }
+
+/* Compact mobile hierarchy: desktop image cards never reserve drawer space. */
+.drawer .nada-menu { flex-direction: column; align-items: stretch; gap: 0; }
+.drawer .nada-menu li { margin: 0; padding: 0; }
+.drawer .nada-menu > li > a { display: block; font-size: 1.125rem; line-height: 1.4; padding-block: 10px; }
+.drawer .nada-menu .sub-menu { margin: 0; padding-block: 0; padding-inline: 12px 0; }
+.drawer .nada-menu .sub-menu a { display: block; font-size: .875rem; font-weight: 500; line-height: 1.4; padding-block: 7px; border-bottom: 0; }
+.drawer .nada-menu .sub-menu .megacard__img { display: none; }
+
+@media (min-width: 1081px) { .drawer { display: none; } }
+/* Keep the close control above the drawer on every page design. */
+body.nada-menu-open #nav { position: fixed; z-index: 100; inset-inline: 0; }
+.drawer__nav > a, .drawer__nav .nada-languages a { font-size: 1.125rem; line-height: 1.4; }
