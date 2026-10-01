@@ -121,3 +121,6 @@ body.nada-recipe-open { overflow: hidden; }
 /* Keep the close control above the drawer on every page design. */
 body.nada-menu-open #nav { position: fixed; z-index: 100; inset-inline: 0; }
 .drawer__nav > a, .drawer__nav .nada-languages a { font-size: 1.125rem; line-height: 1.4; }
+
+/* Share the hero's content edges with the recipe filters and cards. */
+[data-page="recipes"] .rbook { max-width: calc(var(--wrap) + var(--pad) + var(--pad)); }
